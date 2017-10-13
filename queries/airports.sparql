@@ -1,0 +1,13 @@
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT * WHERE {
+  ?airport a <http://dbpedia.org/ontology/Airport>; rdfs:label ?name.
+  { ?airport <http://dbpedia.org/property/iata> 'EZE'@en. }
+  UNION
+  { ?airport <http://dbpedia.org/ontology/iataLocationIdentifier> 'EZE'@en. }
+  OPTIONAL { ?airport foaf:homepage ?airport_home. }
+  OPTIONAL { ?airport rdfs:label ?name. }
+  OPTIONAL { ?airport <http://dbpedia.org/property/nativename> ?airport_name.}
+  FILTER ( !bound(?name) || langMatches( lang(?name), 'en') )
+}

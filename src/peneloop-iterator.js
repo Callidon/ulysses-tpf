@@ -1,4 +1,4 @@
-/* file : peneloop.js
+/* file : peneloop-iterator.js
 MIT License
 
 Copyright (c) 2017 Thomas Minier
@@ -24,29 +24,25 @@ SOFTWARE.
 
 'use strict'
 
-const { sample } = require('lodash')
-const { URL } = require('url')
-const ldfRequester = require('ldf-client/lib/util/Request')
+const ldf = require('ldf-client')
+const { TransformIterator } = require('asynciterator')
+const ModelRepository = require('./model/model-repository.js')
+const peneloopRequester = require('./peneloop.js')
+ldf.Logger.setLevel('WARNING')
 
-function createPeneloopRequest (servers, model) {
-  return function (settings) {
-    // recompute model, then select random target TPF server according to the cost-model
-    model.computeModel()
-    const selectedServer = sample(model.getRNGVector())
-    // execute HTTP request with selected TPF server
-    const searchParams = new URL(settings.url).search
-    if (searchParams !== '') {
-      settings.url = `${selectedServer}${searchParams}`
-    }
-    const startTime = settings.startTime || Date.now()
-    const request = ldfRequester(settings)
-    // update model on response
-    request.on('response', () => {
-      const endTime = Date.now() - startTime
-      model.setResponseTime(selectedServer, endTime)
-    })
-    return request
-  }
+function peneloopIterator (query, servers, config) {
+  const iterator = new TransformIterator()
+  const modelRepo = new ModelRepository()
+  modelRepo.getModel(servers)
+  .then(model => {
+    config.request = peneloopRequester(servers, model)
+    config.fragmentsClient = new ldf.FragmentsClient(servers[0], config)
+    iterator.source = new ldf.SparqlIterator(query, config)
+  }).catch(error => {
+    iterator.emit('error', error)
+    iterator.close()
+  })
+  return iterator
 }
 
-module.exports = createPeneloopRequest
+module.exports = peneloopIterator

@@ -1,0 +1,7 @@
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT ?actor ?city
+WHERE {
+  ?actor a dbo:Actor.
+  ?actor dbo:birthPlace ?city.
+  ?city dbo:country dbpedia:United_States.
+} LIMIT 100

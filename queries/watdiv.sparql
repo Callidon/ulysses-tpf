@@ -1,0 +1,16 @@
+PREFIX goodrelations: <http://purl.org/goodrelations/>
+PREFIX ogp: <http://ogp.me/ns#>
+PREFIX schema: <http://schema.org/>
+PREFIX wsdbm: <http://db.uwaterloo.ca/~galuc/wsdbm/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT DISTINCT ?v0 ?v1 ?v2 ?v3 ?v5 ?v6 ?v7
+WHERE {
+  ?v0 goodrelations:includes ?v1 .
+  ?v0 goodrelations:includes ?v1 .
+  ?v0 goodrelations:validFrom ?v2 .
+  ?v1 ogp:title ?v3 .
+  ?v1 rdf:type wsdbm:ProductCategory11 .
+  ?v1 schema:description ?v5 .
+  ?v1 schema:text ?v6 .
+  ?v7 wsdbm:purchaseFor ?v1 .
+}
