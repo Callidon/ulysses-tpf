@@ -1,0 +1,47 @@
+{
+  "name": "peneloop-tpf",
+  "version": "1.0.0",
+  "description": "Adaptive PeNeLoop algorithm for replicated TPF servers",
+  "main": "./src/peneloop.js",
+  "bin": {
+    "peneloop-tpf": "./bin/peneloop-tpf.js"
+  },
+  "scripts": {
+    "test": "jest --notify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Callidon/peneloop-tpf.git"
+  },
+  "keywords": [
+    "TPF",
+    "peneloop",
+    "adaptive load balancing"
+  ],
+  "author": "Thomas Minier <thomas.minier@univ-nantes.fr>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Callidon/peneloop-tpf/issues"
+  },
+  "homepage": "https://github.com/Callidon/peneloop-tpf#readme",
+  "dependencies": {
+    "commander": "^2.11.0",
+    "ldf-client": "^2.0.5",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "jest": "^21.2.1",
+    "nock": "^9.0.22",
+    "standard": "^10.0.3"
+  },
+  "standard": {
+    "env": [
+      "node",
+      "jest"
+    ]
+  },
+  "jest": {
+    "verbose": true,
+    "testRegex": "tests/.*-test\\.js$"
+  }
+}
