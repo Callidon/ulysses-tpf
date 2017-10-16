@@ -25,7 +25,7 @@ SOFTWARE.
 'use strict'
 
 const Model = require('../src/model/model.js')
-const peneloopRequester = require('../src/peneloop.js')
+const peneloopRequester = require('../src/peneloop-request.js')
 
 describe('Peneloop requester', () => {
   const servers = [ 'http://fragments.dbpedia.org/2016-04/en', 'http://fragments.dbpedia.org/2015-10/en' ]

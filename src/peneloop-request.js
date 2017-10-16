@@ -24,22 +24,24 @@ SOFTWARE.
 
 'use strict'
 
-const { sample } = require('lodash')
+const { isUndefined, merge, sample } = require('lodash')
 const { URL } = require('url')
 const ldfRequester = require('ldf-client/lib/util/Request')
 
 function createPeneloopRequest (servers, model) {
   return function (settings) {
+    const newSettings = merge({}, settings)
     // recompute model, then select random target TPF server according to the cost-model
     model.computeModel()
     const selectedServer = sample(model.getRNGVector())
     // execute HTTP request with selected TPF server
     const searchParams = new URL(settings.url).search
-    if (searchParams !== '') {
-      settings.url = `${selectedServer}${searchParams}`
+    newSettings.url = `${selectedServer}${searchParams}`
+    if (!isUndefined(newSettings.headers)) {
+      newSettings.headers.referer = selectedServer
     }
-    const startTime = settings.startTime || Date.now()
-    const request = ldfRequester(settings)
+    const startTime = Date.now()
+    const request = ldfRequester(newSettings)
     // update model on response
     request.on('response', () => {
       const endTime = Date.now() - startTime

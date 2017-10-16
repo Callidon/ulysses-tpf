@@ -27,7 +27,7 @@ SOFTWARE.
 const ldf = require('ldf-client')
 const { TransformIterator } = require('asynciterator')
 const ModelRepository = require('./model/model-repository.js')
-const peneloopRequester = require('./peneloop.js')
+const peneloopRequester = require('./peneloop-request.js')
 ldf.Logger.setLevel('WARNING')
 
 function peneloopIterator (query, servers, config) {

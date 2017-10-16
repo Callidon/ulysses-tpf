@@ -23,7 +23,7 @@ mkdir -p $OUTPUT/results/
 mkdir -p $OUTPUT/errors/
 
 pids=()
-echo -n "$NBCLIENTS," >> $OUTPUT/execution_times.csv
+echo -n "$NBCLIENTS," >> $OUTPUT/execution_times_ref.csv
 
 # tell eventual proxies to move to the next query
 # GET http://localhost:8000/move-to-query?name=$RESULTS
@@ -39,7 +39,7 @@ done
 # give some time for clients to start processing
 sleep 5
 
-bin/peneloop-tpf.js $SERVERS -f $FILE -m $OUTPUT/execution_times.csv > $OUTPUT/results/$RESULTS-$NBCLIENTS 2> $OUTPUT/errors/$RESULTS-$NBCLIENTS
+ldf-client $SERVER -f $FILE -m $OUTPUT/execution_times.csv > $OUTPUT/results/$RESULTS-$NBCLIENTS-ref 2> $OUTPUT/errors/$RESULTS-$NBCLIENTS-ref
 
 # kill clients
 kill -9 ${pids[@]} > /dev/null 2> /dev/null
