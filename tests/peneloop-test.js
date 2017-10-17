@@ -31,7 +31,7 @@ describe('Peneloop requester', () => {
   const servers = [ 'http://fragments.dbpedia.org/2016-04/en', 'http://fragments.dbpedia.org/2015-10/en' ]
   it('should perform an HTTP request between servers using the cost-model', done => {
     const model = new Model(servers, [ 1.0, 1.0 ], { 'http://fragments.dbpedia.org/2016-04/en': 100, 'http://fragments.dbpedia.org/2015-10/en': 100 })
-    const requester = peneloopRequester(servers, model)
+    const requester = peneloopRequester(model)
     const httpRequest = requester({
       url: `${servers[0]}?hello=world`,
       method: 'GET',

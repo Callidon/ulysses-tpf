@@ -109,7 +109,7 @@ class Model extends EventEmitter {
 
   /**
    * Get the randomized vector used by the probabilistic implementation of PeNeLoop
-   * @return {string[]} A randmoized vector of servers URI
+   * @return {string[]} A randomized vector of servers URI
    */
   getRNGVector () {
     const vector = values(this._coefficients).map(x => x / this._sumCoefs)

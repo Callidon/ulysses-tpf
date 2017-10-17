@@ -24,28 +24,36 @@ SOFTWARE.
 
 'use strict'
 
-const { isUndefined, merge, sample } = require('lodash')
+const { isUndefined, sample } = require('lodash')
 const { URL } = require('url')
 const ldfRequester = require('ldf-client/lib/util/Request')
 
-function createPeneloopRequest (servers, model) {
+/**
+ * Create a request function that use the adaptive peneloop load balancing
+ * @author Thomas Minier
+ * @param  {Model}  model - The model associated with the SPARQL query currently evaluated
+ * @param  {Boolean} [recordOnly=true] - Set recordOnly to False if you want to perform load balancing at HTTP level
+ * @return {function} The request function used by the TPF client to perform HTTP request
+ */
+function createPeneloopRequest (model, recordOnly = true) {
   return function (settings) {
-    const newSettings = merge({}, settings)
-    // recompute model, then select random target TPF server according to the cost-model
-    model.computeModel()
-    const selectedServer = sample(model.getRNGVector())
-    // execute HTTP request with selected TPF server
-    const searchParams = new URL(settings.url).search
-    newSettings.url = `${selectedServer}${searchParams}`
-    if (!isUndefined(newSettings.headers)) {
-      newSettings.headers.referer = selectedServer
+    if (!recordOnly) {
+      // recompute model, then select random target TPF server according to the cost-model
+      model.computeModel()
+      const searchParams = new URL(settings.url).search
+      const selectedServer = sample(model.getRNGVector())
+      settings.url = `${selectedServer}${searchParams}`
+      if (!isUndefined(settings.headers)) {
+        settings.headers.referer = selectedServer
+      }
     }
+    const url = settings.url.split('?').shift()
     const startTime = Date.now()
-    const request = ldfRequester(newSettings)
+    const request = ldfRequester(settings)
     // update model on response
     request.on('response', () => {
       const endTime = Date.now() - startTime
-      model.setResponseTime(selectedServer, endTime)
+      model.setResponseTime(url, endTime)
     })
     return request
   }

@@ -27,16 +27,25 @@ SOFTWARE.
 const ldf = require('ldf-client')
 const { TransformIterator } = require('asynciterator')
 const ModelRepository = require('./model/model-repository.js')
+const PeneloopFragmentsClient = require('./peneloop-fragments-client.js')
 const peneloopRequester = require('./peneloop-request.js')
 ldf.Logger.setLevel('WARNING')
 
-function peneloopIterator (query, servers, config) {
+/**
+ * Creates an Iterator that process a SPARQL query using Peneloop adaptive load balancing
+ * @author Thomas Minier
+ * @param  {string} query   - The SPARQL query to evaluate
+ * @param  {string[]} servers - Set of replicated TPF servers used to evaluate the query
+ * @param  {Object} [config={}]  - Additional config object used to configure the TPF client
+ * @return {AsyncIterator} The Iterator that evaluate the SPARQL query
+ */
+function peneloopIterator (query, servers, config = {}) {
   const iterator = new TransformIterator()
   const modelRepo = new ModelRepository()
   modelRepo.getModel(servers)
   .then(model => {
-    config.request = peneloopRequester(servers, model)
-    config.fragmentsClient = new ldf.FragmentsClient(servers[0], config)
+    config.request = peneloopRequester(model)
+    config.fragmentsClient = new PeneloopFragmentsClient(model, servers, config)
     iterator.source = new ldf.SparqlIterator(query, config)
   }).catch(error => {
     iterator.emit('error', error)
