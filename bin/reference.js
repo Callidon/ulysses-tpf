@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* file : peneloop-tpf.js
+/* file : reference.js
 MIT License
 
 Copyright (c) 2017 Thomas Minier
@@ -28,26 +28,27 @@ SOFTWARE.
 const fs = require('fs')
 const path = require('path')
 const program = require('commander')
-const PeneloopIterator = require('../src/peneloop-iterator.js')
+const ldf = require('ldf-client')
+ldf.Logger.setLevel('WARNING')
 
 // Command line interface to execute queries
 program
-  .description('Execute a SPARQL query against several servers using adaptive PeNeLoop')
-  .usage('<servers...> [options]')
+  .description('Execute a SPARQL query using the reference TPF client')
+  .usage('<server> [options]')
   .option('-q, --query <query>', 'evaluates the given SPARQL query')
   .option('-f, --file <file>', 'evaluates the SPARQL query in the given file')
   .option('-t, --type <mime-type>', 'determines the MIME type of the output (e.g., application/json)', 'application/json')
-  .option('-m, --measure <output>', 'measure the query execution time (in seconds) & append it to a file', './execution_times.csv')
+  .option('-m, --measure <output>', 'measure the query execution time (in seconds) & append it to a file', './execution_times_ref.csv')
   .option('-s, --silent', 'do not perform any measurement (silent mode)', false)
   .parse(process.argv)
 
 // get servers
-if (program.args.length <= 0) {
-  process.stderr.write('Error: you must specify at least one TPF server to use.\nSee peneloop-tpf --help for more details.\n')
+if (program.args.length !== 1) {
+  process.stderr.write('Error: you must specify exactly one TPF server to use.\nSee ./bin/reference.js --help for more details.\n')
   process.exit(1)
 }
 
-const servers = program.args
+const server = program.args
 const configFile = path.join(__dirname, '../node_modules/ldf-client/config-default.json')
 const config = JSON.parse(fs.readFileSync(configFile, { encoding: 'utf8' }))
 
@@ -58,11 +59,11 @@ if (program.query) {
 } else if (program.file && fs.existsSync(program.file)) {
   query = fs.readFileSync(program.file, 'utf-8')
 } else {
-  process.stderr.write('Error: you must specify a SPARQL query to execute.\nSee peneloop-tpf --help for more details.\n')
+  process.stderr.write('Error: you must specify a SPARQL query to execute.\nSee ./bin/reference.js --help for more details.\n')
   process.exit(1)
 }
-
-const iterator = PeneloopIterator(query, servers, config)
+config.fragmentsClient = new ldf.FragmentsClient(server, config)
+const iterator = ldf.SparqlIterator(query, config)
 iterator.on('error', error => {
   process.stderr.write('ERROR: An error occurred during query execution.\n')
   process.stderr.write(error.stack)

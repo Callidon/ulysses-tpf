@@ -2,7 +2,7 @@
   "name": "peneloop-tpf",
   "version": "1.0.0",
   "description": "Adaptive PeNeLoop algorithm for replicated TPF servers",
-  "main": "./src/peneloop.js",
+  "main": "./src/peneloop-iterator.js",
   "bin": {
     "peneloop-tpf": "./bin/peneloop-tpf.js"
   },

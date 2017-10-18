@@ -39,7 +39,7 @@ done
 # give some time for clients to start processing
 sleep 5
 
-ldf-client $SERVER -f $FILE -m $OUTPUT/execution_times.csv > $OUTPUT/results/$RESULTS-$NBCLIENTS-ref 2> $OUTPUT/errors/$RESULTS-$NBCLIENTS-ref
+bin/reference.js $SERVER -f $FILE -m $OUTPUT/execution_times_ref.csv > $OUTPUT/results/$RESULTS-$NBCLIENTS-ref 2> $OUTPUT/errors/$RESULTS-$NBCLIENTS-ref
 
 # kill clients
 kill -9 ${pids[@]} > /dev/null 2> /dev/null
