@@ -31,7 +31,7 @@ const program = require('commander')
 program
   .description('deploy a reverse proxy that add latency to every HTTP call')
   .usage('<target> <delay>')
-  .option('-p, --port <port>', 'the port on which the reverse proxy will be running', 8000)
+  .option('-p, --port <port>', 'the port on which the reverse proxy will be running (default http://localhost:3000)', 3000)
   .parse(process.argv)
 
 if (program.args.length < 2) {
@@ -52,5 +52,5 @@ const proxyServer = http.createServer((req, res) => {
   }, delay)
 })
 
-process.stdout.write(`Latency (delay: ${delay}) proxy up and running on port ${program.port}\n`)
+process.stdout.write(`Latency (delay: ${delay}) proxy up and running at http://localhost:${program.port}\n`)
 proxyServer.listen(program.port)

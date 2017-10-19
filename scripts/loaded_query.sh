@@ -25,10 +25,6 @@ mkdir -p $OUTPUT/errors/
 pids=()
 echo -n "$NBCLIENTS," >> $OUTPUT/execution_times.csv
 
-# tell eventual proxies to move to the next query
-# GET http://localhost:8000/move-to-query?name=$RESULTS
-# GET http://localhost:8001/move-to-query?name=$RESULTS
-
 # generate load
 for (( c=1; c<=$NBCLIENTS; c++ ))
 do

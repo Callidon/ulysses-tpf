@@ -7,7 +7,7 @@ MODE=$3
 
 if [ "$#" -ne 3 ]; then
   echo "Illegal number of parameters."
-  echo "Usage: ./ldf_forever.sh <server> <file> <mode>"
+  echo "Usage: ./ldf_forever.sh <server> <queries-file> <mode>"
   exit
 fi
 
@@ -17,6 +17,11 @@ if [[ "$MODE" = "peneloop" ]]; then
   LDFBIN="bin/peneloop-tpf.js"
 fi
 
+# preload file content in a variable
+FILECONTENT=`cat ${FILE}`
+
 while true; do
-  $LDFBIN $SERVER -f $FILE -s > /dev/null 2> /dev/null
+  while read -r line; do
+    $LDFBIN $SERVER -q "${line}" -s > /dev/null 2> /dev/null
+  done <<< "$FILECONTENT"
 done

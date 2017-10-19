@@ -54,6 +54,54 @@ class Model extends EventEmitter {
   }
 
   /**
+   * Get the set of replicated TPF servers
+   * @return {string[]} The set of replicated TPF servers
+   */
+  get servers () {
+    return this._servers
+  }
+
+  /**
+   * Get the last recorded latencies
+   * @return {Object} URLs of servers associated with their last recorded latencies
+   */
+  get latencies () {
+    return this._times
+  }
+
+  /**
+   * Get the number of triples per page per server
+   * @return {Object} URLs of servers associated with their number of triples per page
+   */
+  get triplesPerPage () {
+    return this._triplesPerPage
+  }
+
+  /**
+   * Get the current weights of servers
+   * @return {Object} URLs of servers associated with their current weight
+   */
+  get weights () {
+    return this._weights
+  }
+
+  /**
+   * Get capability coefficients of servers
+   * @return {Object} URLs of servers associated with their capability coefficient
+   */
+  get coefficients () {
+    return this._coefficients
+  }
+
+  /**
+   * Get the sum of all coefficients
+   * @return {integer} The sum of all coefficients
+   */
+  get sumCoefficients () {
+    return this._sumCoefs
+  }
+
+  /**
    * Get the weight for a specific endpoint
    * @param  {string} endpoint - The endpoint
    * @return {number} The weight of the endpoint

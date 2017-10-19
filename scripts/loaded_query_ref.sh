@@ -7,7 +7,7 @@ NBCLIENTS=$3
 
 if [ "$#" -ne 3 ]; then
   echo "Illegal number of parameters."
-  echo "Usage: ./loaded_query.sh <file> <output-folder> <nb-concurrent-clients>"
+  echo "Usage: ./loaded_query_ref.sh <file> <output-folder> <nb-concurrent-clients>"
   exit
 fi
 
@@ -24,10 +24,6 @@ mkdir -p $OUTPUT/errors/
 
 pids=()
 echo -n "$NBCLIENTS," >> $OUTPUT/execution_times_ref.csv
-
-# tell eventual proxies to move to the next query
-# GET http://localhost:8000/move-to-query?name=$RESULTS
-# GET http://localhost:8001/move-to-query?name=$RESULTS
 
 # generate load
 for (( c=1; c<=$NBCLIENTS; c++ ))
