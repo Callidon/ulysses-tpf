@@ -20,11 +20,15 @@ pids+=($!)
 ldf-server $CONFIG 4001 4 &
 pids+=($!)
 
+sleep 5
+
 # launch latency proxies
 scripts/latency_proxy.js http://localhost:4000 $LATENCY -p 3000 &
 pids+=($!)
 scripts/latency_proxy.js http://localhost:4001 $LATENCY -p 3001 &
 pids+=($!)
+
+sleep 5
 
 # launch experiment
 if [[ "$MODE" = "ref" ]]; then
