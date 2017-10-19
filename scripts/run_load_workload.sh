@@ -6,7 +6,7 @@ OUTPUT=$2
 
 if [ "$#" -ne 2 ]; then
   echo "Illegal number of parameters."
-  echo "Usage: ./run_load.sh <file> <output-folder>"
+  echo "Usage: ./run_load_workload.sh <file> <output-folder>"
   exit
 fi
 
