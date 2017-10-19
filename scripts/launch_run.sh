@@ -5,7 +5,7 @@ CONFIG=$1
 LATENCY=$2
 FILE=$3
 OUTPUT=$4
-MODE=$3
+MODE=$5
 pids=()
 
 if [ "$#" -ne 5 ]; then
