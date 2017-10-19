@@ -26,10 +26,10 @@ echo "clients,time" > $OUTPUT/execution_times_ref.csv
 # run with each number of clients
 for nb in ${NBCLIENTS[@]}; do
   pids=()
-  echo -n "$NBCLIENTS," >> $OUTPUT/execution_times_ref.csv
+  echo -n "$nb," >> $OUTPUT/execution_times_ref.csv
 
   # generate load
-  for (( c=1; c<=$NBCLIENTS; c++ ))
+  for (( c=1; c<=$nb; c++ ))
   do
     ./scripts/ldf_forever.sh $SERVER $FILE $MODE &
     pids+=($!)
