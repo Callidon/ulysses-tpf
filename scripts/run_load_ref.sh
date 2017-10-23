@@ -38,7 +38,7 @@ for nb in ${NBCLIENTS[@]}; do
   # give some time for clients to start processing
   sleep 5
 
-  bin/reference.js $SERVER -f $FILE -m $OUTPUT/execution_times_ref.csv > $OUTPUT/results/$QUERYFILE-$NBCLIENTS-ref 2> $OUTPUT/errors/$QUERYFILE-$NBCLIENTS-ref
+  bin/reference.js $SERVER -f $FILE -m $OUTPUT/execution_times_ref.csv > $OUTPUT/results/$QUERYFILE-$nb-ref 2> $OUTPUT/errors/$QUERYFILE-$nb-ref
 
   # kill clients
   kill -9 ${pids[@]} > /dev/null 2> /dev/null
