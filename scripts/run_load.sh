@@ -30,10 +30,10 @@ echo "clients,time" > $OUTPUT/execution_times.csv
 # run with each number of clients
 for nb in ${NBCLIENTS[@]}; do
   pids=()
-  echo -n "$NBCLIENTS," >> $OUTPUT/execution_times.csv
+  echo -n "$nb," >> $OUTPUT/execution_times.csv
 
   # generate load
-  for (( c=1; c<=$NBCLIENTS; c++ ))
+  for (( c=1; c<=$nb; c++ ))
   do
     ./scripts/ldf_forever.sh $SERVER $FILE $MODE &
     pids+=($!)
@@ -42,7 +42,7 @@ for nb in ${NBCLIENTS[@]}; do
   # give some time for clients to start processing
   sleep 5
 
-  bin/peneloop-tpf.js $SERVERS -f $FILE -m $OUTPUT/execution_times.csv > $OUTPUT/results/$QUERYFILE-$NBCLIENTS 2> $OUTPUT/errors/$QUERYFILE-$NBCLIENTS
+  bin/peneloop-tpf.js $SERVERS -f $FILE -m $OUTPUT/execution_times.csv > $OUTPUT/results/$QUERYFILE-$nb 2> $OUTPUT/errors/$QUERYFILE-$nb
 
   # kill clients
   kill -9 ${pids[@]} > /dev/null 2> /dev/null
