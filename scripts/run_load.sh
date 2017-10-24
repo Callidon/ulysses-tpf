@@ -4,19 +4,16 @@
 FILE=$1 # i.e. file that contains a SPARQL query to execute
 OUTPUT=$2
 MODE=$3
+NBLOADED=$4
 
-if [ "$#" -ne 3 ]; then
+if [ "$#" -ne 4 ]; then
   echo "Illegal number of parameters."
-  echo "Usage: ./run_load.sh <file> <output-folder> <mode>"
+  echo "Usage: ./run_load.sh <file> <output-folder> <mode> <nb-loaded-servers>"
   exit
 fi
 
 QUERYFILE=`basename $FILE`
 NBCLIENTS=(1 2 3 4 5 6 7 8 9 10 15 20 25 30 35 45 50 60 70 80 90 100)
-
-# server to load
-# SERVER="http://34.208.134.212/watDiv_100" # AWS server
-SERVER="http://localhost:3000/watDiv_100" # local server
 
 # servers used by peneloop
 # SERVERS="http://34.208.134.212/watDiv_100 http://52.10.10.208/watDiv_100" # AWS servers
@@ -32,11 +29,23 @@ for nb in ${NBCLIENTS[@]}; do
   pids=()
   echo -n "$nb," >> $OUTPUT/execution_times.csv
 
-  # generate load
-  for (( c=1; c<=$nb; c++ ))
-  do
-    ./scripts/ldf_forever.sh $SERVER $FILE $MODE &
-    pids+=($!)
+  # generate load for NBLOADED server(s)
+  for (( c=1; c<=$nb; c++ )); do
+    # peneloop clients already query N clients
+    if [[ "$MODE" = "peneloop" ]]; then
+      {
+        while true; do
+          bin/peneloop-tpf.js $SERVERS -f $FILE -s > /dev/null 2> /dev/null
+        done
+      } &
+      pids+=($!)
+    else
+      #  generate load for NBLOADED server(s)
+      for (( x=0; x<$NBLOADED; x++)); do
+        ./scripts/ldf_forever.sh ${SERVERS[x]} $FILE &
+        pids+=($!)
+      done
+    fi
   done
 
   # give some time for clients to start processing

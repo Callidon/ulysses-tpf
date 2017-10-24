@@ -12,7 +12,7 @@ time_ref = computeMean(
     "curio/run2/execution_times_ref.csv",
     "curio/run3/execution_times_ref.csv"
 )
-time_ref[:approach] = "TPF"
+time_ref[:approach] = "TPF only"
 
 time_peneloop = computeMean(
     :time,
@@ -28,12 +28,13 @@ time_mixed = computeMean(
     "curio/run2/execution_times_mixed.csv",
     "curio/run3/execution_times_mixed.csv"
 )
-time_mixed[:approach] = "TPF + PeNeLoop"
+time_mixed[:approach] = "PeNeLoop + TPF"
 
 # RAW version
 # p = plot([time_ref;time_mixed;time_peneloop], y=:time, x=:clients, color=:approach, Geom.line, Guide.xlabel("Number of clients"), Guide.ylabel("Execution time (s)"), Scale.x_discrete)
 # Smooth version
-p = plot([time_ref;time_mixed;time_peneloop], y=:time, x=:clients, color=:approach, Geom.smooth(method=:loess, smoothing=0.9), Guide.xlabel("Number of clients"), Guide.ylabel("Execution time (s)"), Scale.x_discrete)
+p = plot([time_ref;time_mixed;time_peneloop], y=:time, x=:clients, color=:approach, Geom.smooth(method=:loess, smoothing=0.75),
+Guide.xlabel("Number of clients executing the query in parallel"), Guide.ylabel("Execution time (s)"), Guide.colorkey("Type of clients"), Scale.x_discrete)
 
 # execution times plots
 draw(PDF("curio/execution_time.pdf", 15inch, 7inch), p)
