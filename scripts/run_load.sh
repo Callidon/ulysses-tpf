@@ -17,7 +17,7 @@ NBCLIENTS=(1 2 3 4 5 6 7 8 9 10 15 20 25 30 35 45 50 60 70 80 90 100)
 
 # servers used by peneloop
 # SERVERS="http://34.208.134.212/watDiv_100 http://52.10.10.208/watDiv_100" # AWS servers
-SERVERS=("http://localhost:3000/watDiv_100 http://localhost:3001/watDiv_100 http://localhost:3002/watDiv_100") # local servers
+SERVERS=("http://localhost:3000/watDiv_100" "http://localhost:3001/watDiv_100" "http://localhost:3002/watDiv_100") # local servers
 
 mkdir -p $OUTPUT/results/
 mkdir -p $OUTPUT/errors/
