@@ -71,7 +71,11 @@ if (!program.silent) {
   iterator.on('end', () => {
     const endTime = Date.now()
     const time = endTime - startTime
-    fs.appendFileSync(program.measure, (time / 1000) + '\n')
+    // record last value for the cost-model
+    const coefficients = servers.map(server => {
+      return config.fragmentsClient._model.getCoefficient(server)
+    })
+    fs.appendFileSync(program.measure, `${(time / 1000)},${coefficients.join(',')}\n`)
   })
 }
 const startTime = Date.now()

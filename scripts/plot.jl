@@ -37,4 +37,4 @@ p = plot([time_ref;time_mixed;time_peneloop], y=:time, x=:clients, color=:approa
 Guide.xlabel("Number of clients executing the query in parallel"), Guide.ylabel("Execution time (s)"), Guide.colorkey("Type of clients"), Scale.x_discrete)
 
 # execution times plots
-draw(PDF("curio/execution_time.pdf", 15inch, 7inch), p)
+draw(PDF("curio/execution_time_2servers.pdf", 15inch, 7inch), p)

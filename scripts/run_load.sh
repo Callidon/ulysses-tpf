@@ -17,12 +17,18 @@ NBCLIENTS=(1 2 3 4 5 6 7 8 9 10 15 20 25 30 35 45 50 60 70 80 90 100)
 
 # servers used by peneloop
 # SERVERS="http://34.208.134.212/watDiv_100 http://52.10.10.208/watDiv_100" # AWS servers
-SERVERS="http://localhost:3000/watDiv_100 http://localhost:3001/watDiv_100 http://localhost:3002/watDiv_100" # local servers
+SERVERS=("http://localhost:3000/watDiv_100 http://localhost:3001/watDiv_100 http://localhost:3002/watDiv_100") # local servers
 
 mkdir -p $OUTPUT/results/
 mkdir -p $OUTPUT/errors/
 
-echo "clients,time" > $OUTPUT/execution_times.csv
+echo -n "clients,time" > $OUTPUT/execution_times.csv
+for (( i=0; i<${#SERVERS[@]}; i++ )); do
+  echo -n ",E$i" >> $OUTPUT/execution_times.csv
+done
+
+# add a \n
+echo >> $OUTPUT/execution_times.csv
 
 # run with each number of clients
 for nb in ${NBCLIENTS[@]}; do
@@ -35,7 +41,7 @@ for nb in ${NBCLIENTS[@]}; do
     if [[ "$MODE" = "peneloop" ]]; then
       {
         while true; do
-          bin/peneloop-tpf.js $SERVERS -f $FILE -s > /dev/null 2> /dev/null
+          bin/peneloop-tpf.js ${SERVERS[@]} -f $FILE -s > /dev/null 2> /dev/null
         done
       } &
       pids+=($!)
@@ -51,7 +57,7 @@ for nb in ${NBCLIENTS[@]}; do
   # give some time for clients to start processing
   sleep 5
 
-  bin/peneloop-tpf.js $SERVERS -f $FILE -m $OUTPUT/execution_times.csv > $OUTPUT/results/$QUERYFILE-$nb 2> $OUTPUT/errors/$QUERYFILE-$nb
+  bin/peneloop-tpf.js ${SERVERS[@]} -f $FILE -m $OUTPUT/execution_times.csv > $OUTPUT/results/$QUERYFILE-$nb 2> $OUTPUT/errors/$QUERYFILE-$nb
 
   # kill clients
   kill -9 ${pids[@]} > /dev/null 2> /dev/null
