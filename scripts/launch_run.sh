@@ -19,6 +19,8 @@ ldf-server $CONFIG 4000 4 &
 pids+=($!)
 ldf-server $CONFIG 4001 4 &
 pids+=($!)
+ldf-server $CONFIG 4002 4 &
+pids+=($!)
 
 sleep 5
 
@@ -26,6 +28,8 @@ sleep 5
 scripts/latency_proxy.js http://localhost:4000 $LATENCY -p 3000 &
 pids+=($!)
 scripts/latency_proxy.js http://localhost:4001 $LATENCY -p 3001 &
+pids+=($!)
+scripts/latency_proxy.js http://localhost:4002 $LATENCY -p 3002 &
 pids+=($!)
 
 sleep 5
