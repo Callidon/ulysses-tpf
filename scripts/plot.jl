@@ -57,3 +57,5 @@ Guide.xlabel("Number of clients executing the query in parallel"), Guide.ylabel(
 # execution times plots
 draw(PDF("curio/execution_time_2servers.pdf", 15inch, 7inch), p)
 draw(PDF("curio/execution_time_3servers.pdf", 15inch, 7inch), p_3s)
+draw(PNG("curio/execution_time_2servers.png", 15inch, 7inch), p)
+draw(PNG("curio/execution_time_3servers.png", 15inch, 7inch), p_3s)
