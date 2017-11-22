@@ -102,6 +102,17 @@ class Model extends EventEmitter {
   }
 
   /**
+   * Return a subset of the model for a given set of servers
+   * @param {string[]} servers - Set of servers used to filter the model
+   * @return {Model} A submodel
+   */
+  subset (servers) {
+    const times = servers.map(s => this._times[s])
+    const triplesPerPage = zipObject(servers, servers.map(s => this._triplesPerPage[s]))
+    return new Model(servers, times, triplesPerPage)
+  }
+
+  /**
    * Get the weight for a specific endpoint
    * @param  {string} endpoint - The endpoint
    * @return {number} The weight of the endpoint

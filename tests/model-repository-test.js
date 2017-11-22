@@ -49,9 +49,35 @@ describe('ModelRepository', () => {
         'http://example.second.org/en': 200
       })
       expect(model.getCoefficient('http://example.first.org/en')).toBe(1)
+      expect(model.getCoefficient('http://example.second.org/en')).toBe(1)
       expect(model._sumCoefs).toBe(2)
       done()
     })
-    .catch(err => done(err))
+    .catch(done)
+  })
+
+  it('should be able to compute subset of models', done => {
+    const repo = new ModelRepository()
+    const servers = [ 'http://example.first.org/en', 'http://example.second.org/en' ]
+
+    // setup mocks
+    const triple = { predicate: 'http://dbpedia.org/property/page' }
+    mockPages({}, 'http://example.first.org', 'en', { delay: 10, pageSize: 100 })
+    mockPages({}, 'http://example.second.org', 'en', { delay: 10, pageSize: 200 })
+    mockPages(triple, 'http://example.first.org', 'en', { cardinality: 1420, pageSize: 100 })
+    mockPages(triple, 'http://example.second.org', 'en', { cardinality: 1420, pageSize: 200 })
+
+    repo.getModel(servers)
+    .then(model => {
+      const submodel = model.subset(servers.slice(1))
+      expect(submodel._servers).toEqual(servers.slice(1))
+      expect(submodel._triplesPerPage).toEqual({
+        'http://example.second.org/en': 200
+      })
+      expect(submodel.getCoefficient('http://example.second.org/en')).toBe(1)
+      expect(submodel._sumCoefs).toBe(1)
+      done()
+    })
+    .catch(done)
   })
 })

@@ -24,7 +24,7 @@ SOFTWARE.
 
 'use strict'
 
-const { stringifyPattern } = require('../utils.js')
+const { patternContainment, stringifyPattern } = require('../utils.js')
 
 /**
  * A Selection gives, for a triple pattern, the list of all relevant servers
@@ -33,14 +33,19 @@ const { stringifyPattern } = require('../utils.js')
 class Selection {
   constructor () {
     this._selection = new Map()
+    this._references = []
   }
 
   set (pattern, servers) {
+    this._references.push(pattern)
     this._selection.set(stringifyPattern(pattern), servers)
   }
 
   get (pattern) {
-    return this._selection.get(stringifyPattern(pattern))
+    // try to find containment first
+    const refPattern = patternContainment(pattern, this._references)
+    if (refPattern === null) return null
+    return this._selection.get(stringifyPattern(refPattern))
   }
 }
 

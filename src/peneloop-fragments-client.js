@@ -24,7 +24,7 @@ SOFTWARE.
 
 'use strict'
 
-const { sample } = require('lodash')
+const { isNull, isUndefined, sample } = require('lodash')
 const LRU = require('lru-cache')
 const FragmentsClient = require('ldf-client/lib/triple-pattern-fragments/FragmentsClient')
 
@@ -37,10 +37,12 @@ class PeneloopFragmentsClient {
    * Constructor
    * @param  {Model}  model - The model associated with the SPARQL query currently evaluated
    * @param  {string[]} servers - Set of replicated TPF servers used to evaluate the query
+   * @param  {Selection} selection - Source selection used to process queries
    * @param  {Object} [config={}]  - Additional config object used to configure the TPF client
    */
-  constructor (model, servers, options) {
+  constructor (model, servers, selection, options) {
     this._model = model
+    this._selection = selection
     this._options = options
     this._clients = new Map()
     this._options.cache = new LRU({ max: 5000 })
@@ -52,12 +54,20 @@ class PeneloopFragmentsClient {
   /**
    * Same as classic FragmentsClient#getFragmentByPattern, but done using adaptive Peneloop
    * @param  {Object} pattern - Triple pattern requested
+   * @param  {Object} sourcePattern -
    * @return {AsyncIterator} Iterator that evaluates the triple pattern against a TPF server
    */
-  getFragmentByPattern (pattern) {
-    // recompute model, then select random target TPF server according to the cost-model
+  getFragmentByPattern (pattern, sourcePattern = null) {
+    // recompute model, then select the submodel corresponding to the pattern
     this._model.computeModel()
-    const selectedServer = sample(this._model.getRNGVector())
+    let model = this._model
+    let servers = this._selection.get(pattern)
+    if (!isNull(servers) && !(isUndefined(servers))) {
+      if (servers.length === 1) return this._clients.get(servers[0]).getFragmentByPattern(pattern)
+      model = this._model.subset(servers)
+    }
+    // select random target TPF server according to the cost-model
+    const selectedServer = sample(model.getRNGVector())
     return this._clients.get(selectedServer).getFragmentByPattern(pattern)
   }
 }

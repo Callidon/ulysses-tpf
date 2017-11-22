@@ -29,6 +29,7 @@ const { TransformIterator } = require('asynciterator')
 const ModelRepository = require('./model/model-repository.js')
 const PeneloopFragmentsClient = require('./peneloop-fragments-client.js')
 const peneloopRequester = require('./peneloop-request.js')
+const sourceSelection = require('./source-selection/source-selection.js')
 ldf.Logger.setLevel('WARNING')
 
 /**
@@ -42,10 +43,12 @@ ldf.Logger.setLevel('WARNING')
 function peneloopIterator (query, servers, config = {}) {
   const iterator = new TransformIterator()
   const modelRepo = new ModelRepository()
-  modelRepo.getModel(servers)
-  .then(model => {
+  Promise.all([modelRepo.getModel(servers), sourceSelection(query, servers)])
+  .then(res => {
+    const model = res[0]
+    const selection = res[1]
     config.request = peneloopRequester(model)
-    config.fragmentsClient = new PeneloopFragmentsClient(model, servers, config)
+    config.fragmentsClient = new PeneloopFragmentsClient(model, servers, selection, config)
     iterator.source = new ldf.SparqlIterator(query, config)
   }).catch(error => {
     iterator.emit('error', error)

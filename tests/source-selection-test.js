@@ -29,18 +29,18 @@ const sourceSelection = require('../src/source-selection/source-selection.js')
 describe('Sourceselection', () => {
   it('should perform a source selection', done => {
     const servers = [ 'http://fragments.dbpedia.org/2016-04/en', 'http://fragments.mementodepot.org/scigraph' ]
-    const query = 'SELECT * WHERE { ?s ?p ?o . <http://www.springernature.com/scigraph/ontologies/core/Affiliation> ?p1 ?o1. }'
+    const query = 'SELECT * WHERE { ?s <http://dbpedia.org/property/date> ?o . <http://www.springernature.com/scigraph/ontologies/core/Affiliation> ?p1 ?o1. }'
     sourceSelection(query, servers).then(selection => {
       expect(selection.get({
         subject: '?s',
-        predicate: '?p',
+        predicate: 'http://dbpedia.org/property/date',
         object: '?o'
-      })).toEqual(servers)
+      })).toEqual([ 'http://fragments.dbpedia.org/2016-04/en' ])
       expect(selection.get({
         subject: 'http://www.springernature.com/scigraph/ontologies/core/Affiliation',
         predicate: '?p1',
         object: '?o1'
-      })).toEqual(servers.slice(1))
+      })).toEqual([ 'http://fragments.mementodepot.org/scigraph' ])
       done()
     })
   })

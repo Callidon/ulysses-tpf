@@ -25,7 +25,7 @@ SOFTWARE.
 'use strict'
 
 const { Parser } = require('sparqljs')
-const { compact, flatten, map } = require('lodash')
+const { compact, every, flatten, map } = require('lodash')
 
 /**
  * Stringify a triple pattern
@@ -34,6 +34,24 @@ const { compact, flatten, map } = require('lodash')
  */
 function stringifyPattern (pattern) {
   return `s=${pattern.subject || '_'}&p=${pattern.predicate || '_'}&o=${pattern.object || '_'}`
+}
+
+/**
+ * Find triple pattern containment between a pattern and a set of reference patterns
+ * @param  {[type]} pattern   [description]
+ * @param  {[type]} refrences [description]
+ * @return {[type]}           [description]
+ */
+function patternContainment (pattern, references) {
+  if (pattern === null) return null
+  for (let ref of references) {
+    const isMatching = every(ref, (val, key) => {
+      if (val.startsWith('?') || pattern[key] === undefined) return true
+      return ref[key] === pattern[key]
+    })
+    if (isMatching) return ref
+  }
+  return null
 }
 
 /**
@@ -83,5 +101,6 @@ module.exports = {
   encodeTPFUrl,
   stringifyPattern,
   extractPatterns,
-  count
+  count,
+  patternContainment
 }
