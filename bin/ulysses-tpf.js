@@ -74,7 +74,7 @@ iterator.on('end', () => {
   if (!program.silent) {
     const endTime = Date.now()
     const time = endTime - startTime
-    fs.appendFileSync(program.measure, (time / 1000) + '\n')
+    fs.appendFileSync(program.measure, time / 1000)
   }
 })
 const startTime = Date.now()

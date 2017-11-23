@@ -22,34 +22,33 @@ elif [[ "$NBSERVERS" = "3" ]]; then
   SERVERS="$SERVERS http://localhost:3001/watDiv_100 http://localhost:3002/watDiv_100"
 fi
 
+# results directories and file
 mkdir -p $OUTPUT/results/
 mkdir -p $OUTPUT/errors/
+RESFILE="${OUTPUT}/execution_times_ulysses_${NBSERVERS}servers.csv"
 
-TIMESFILE="$OUTPUT/execution_times.csv"
-COMPLFILE="$OUTPUT/completeness.csv"
 # preload file content in a variable
 FILECONTENT=`cat ${FILE}`
 
 # init execution time and completeness results
-echo "query,time" > $TIMESFILE
-echo "query,completeness,soundness,errors" > $COMPLFILE
+echo "query,time,completeness,soundness,errors" > $RESFILE
 
 while IFS='' read -r line; do
-  echo -n "${cpt}," >> $TIMESFILE
-  ./bin/ulysses-tpf.js $SERVERS -q "${line}" -m $TIMESFILE > $OUTPUT/results/query-$cpt.log 2> $OUTPUT/errors/query-$cpt.err
-  # compute completeness and soundness
-  echo -n "${cpt}," >> $COMPLFILE
+  echo -n "${cpt}," >> $RESFILE
+  # execution time
+  ./bin/ulysses-tpf.js $SERVERS -q "${line}" -m $RESFILE > $OUTPUT/results/query-$cpt.log 2> $OUTPUT/errors/query-$cpt.err
+  echo -n "," >> $RESFILE
   # completeness
-  echo -n `./scripts/compute_completeness.sh ${REF}/query-$cpt.log ${OUTPUT}/results/query-$cpt.log default` >> $COMPLFILE
-  echo -n "," >> $COMPLFILE
+  echo -n `./scripts/compute_completeness.sh ${REF}/query-$cpt.log ${OUTPUT}/results/query-$cpt.log default` >> $RESFILE
+  echo -n "," >> $RESFILE
   # soundness
-  echo -n `./scripts/compute_completeness.sh ${REF}/query-$cpt.log ${OUTPUT}/results/query-$cpt.log sound` >> $COMPLFILE
-  echo -n "," >> $COMPLFILE
-  # nb errors
-  echo `wc -l ${OUTPUT}/errors/query-${cpt}.err | cut -d " " -f1` > $COMPLFILE
+  echo -n `./scripts/compute_completeness.sh ${REF}/query-$cpt.log ${OUTPUT}/results/query-$cpt.log sound` >> $RESFILE
+  echo -n "," >> $RESFILE
+  # nb errors during query processing
+  echo `wc -l ${OUTPUT}/errors/query-${cpt}.err | cut -d " " -f1` >> $RESFILE
   # move to next query
   cpt=$((cpt+1))
 done <<< "$FILECONTENT"
 
 # remove tmp folders
-rm -rf $OUTPUT/results/ $OUTPUT/errors/ 
+rm -rf $OUTPUT/results/ $OUTPUT/errors/
