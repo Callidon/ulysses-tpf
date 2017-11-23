@@ -37,7 +37,7 @@ program
   .usage('<server> [options]')
   .option('-q, --query <query>', 'evaluates the given SPARQL query')
   .option('-f, --file <file>', 'evaluates the SPARQL query in the given file')
-  .option('-t, --type <mime-type>', 'determines the MIME type of the output (e.g., application/json)', 'application/json')
+  .option('-t, --timeout <timeout>', 'set SPARQL query timeout in milliseconds (default: 30mn)', 30 * 60 * 1000)
   .option('-m, --measure <output>', 'measure the query execution time (in seconds) & append it to a file', './execution_times_ref.csv')
   .option('-s, --silent', 'do not perform any measurement (silent mode)', false)
   .parse(process.argv)
@@ -54,6 +54,7 @@ const config = JSON.parse(fs.readFileSync(configFile, { encoding: 'utf8' }))
 
 // fetch SPARQL query to execute
 let query = null
+let timeout = null
 if (program.query) {
   query = program.query
 } else if (program.file && fs.existsSync(program.file)) {
@@ -68,12 +69,19 @@ iterator.on('error', error => {
   process.stderr.write('ERROR: An error occurred during query execution.\n')
   process.stderr.write(error.stack)
 })
-if (!program.silent) {
-  iterator.on('end', () => {
+
+iterator.on('end', () => {
+  clearTimeout(timeout)
+  if (!program.silent) {
     const endTime = Date.now()
     const time = endTime - startTime
     fs.appendFileSync(program.measure, (time / 1000) + '\n')
-  })
-}
+  }
+})
 const startTime = Date.now()
 iterator.on('data', data => process.stdout.write(JSON.stringify(data) + '\n'))
+
+// set query timeout
+timeout = setTimeout(() => {
+  iterator.close()
+}, program.timeout)
