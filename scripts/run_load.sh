@@ -1,5 +1,5 @@
 #!/bin/bash
-# Run a load experiment with peneloop
+# Run a load experiment with ulysses
 
 FILE=$1 # i.e. file that contains a SPARQL query to execute
 OUTPUT=$2
@@ -15,7 +15,7 @@ fi
 QUERYFILE=`basename $FILE`
 NBCLIENTS=(1 2 3 4 5 6 7 8 9 10 15 20 25 30 35 45 50 60 70 80 90 100)
 
-# servers used by peneloop
+# servers used by ulysses
 # SERVERS="http://34.208.134.212/watDiv_100 http://52.10.10.208/watDiv_100" # AWS servers
 SERVERS=("http://localhost:3000/watDiv_100" "http://localhost:3001/watDiv_100" "http://localhost:3002/watDiv_100") # local servers
 
@@ -37,11 +37,11 @@ for nb in ${NBCLIENTS[@]}; do
 
   # generate load for NBLOADED server(s)
   for (( c=1; c<=$nb; c++ )); do
-    # peneloop clients already query N clients
-    if [[ "$MODE" = "peneloop" ]]; then
+    # ulysses clients already query N clients
+    if [[ "$MODE" = "ulysses" ]]; then
       {
         while true; do
-          bin/peneloop-tpf.js ${SERVERS[@]} -f $FILE -s > /dev/null 2> /dev/null
+          bin/ulysses-tpf.js ${SERVERS[@]} -f $FILE -s > /dev/null 2> /dev/null
         done
       } &
       pids+=($!)
@@ -57,7 +57,7 @@ for nb in ${NBCLIENTS[@]}; do
   # give some time for clients to start processing
   sleep 5
 
-  bin/peneloop-tpf.js ${SERVERS[@]} -f $FILE -m $OUTPUT/execution_times.csv > $OUTPUT/results/$QUERYFILE-$nb 2> $OUTPUT/errors/$QUERYFILE-$nb
+  bin/ulysses-tpf.js ${SERVERS[@]} -f $FILE -m $OUTPUT/execution_times.csv > $OUTPUT/results/$QUERYFILE-$nb 2> $OUTPUT/errors/$QUERYFILE-$nb
 
   # kill clients
   kill -9 ${pids[@]} > /dev/null 2> /dev/null

@@ -13,8 +13,8 @@ fi
 
 LDFBIN="ldf-client"
 
-if [[ "$MODE" = "peneloop" ]]; then
-  LDFBIN="bin/peneloop-tpf.js"
+if [[ "$MODE" = "ulysses" ]]; then
+  LDFBIN="bin/ulysses-tpf.js"
 fi
 
 # preload file content in a variable

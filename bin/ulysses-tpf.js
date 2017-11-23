@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* file : peneloop-tpf.js
+/* file : ulysses-tpf.js
 MIT License
 
 Copyright (c) 2017 Thomas Minier
@@ -32,7 +32,7 @@ const PeneloopIterator = require('../src/peneloop-iterator.js')
 
 // Command line interface to execute queries
 program
-  .description('Execute a SPARQL query against several servers using adaptive PeNeLoop')
+  .description('Execute a SPARQL query against several servers using adaptive Ulysses')
   .usage('<servers...> [options]')
   .option('-q, --query <query>', 'evaluates the given SPARQL query')
   .option('-f, --file <file>', 'evaluates the SPARQL query in the given file')
@@ -58,7 +58,7 @@ if (program.query) {
 } else if (program.file && fs.existsSync(program.file)) {
   query = fs.readFileSync(program.file, 'utf-8')
 } else {
-  process.stderr.write('Error: you must specify a SPARQL query to execute.\nSee peneloop-tpf --help for more details.\n')
+  process.stderr.write('Error: you must specify a SPARQL query to execute.\nSee ulysses-tpf --help for more details.\n')
   process.exit(1)
 }
 

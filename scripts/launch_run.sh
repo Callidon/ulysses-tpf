@@ -37,10 +37,10 @@ sleep 5
 # launch experiment
 if [[ "$MODE" = "ref" ]]; then
   ./scripts/run_load_ref.sh $FILE $OUTPUT
-elif [[ "$MODE" = "tpf+peneloop" ]]; then
+elif [[ "$MODE" = "tpf+ulysses" ]]; then
   ./scripts/run_load.sh $FILE $OUTPUT ldf 1
-elif [[ "$MODE" = "peneloop" ]]; then
-  ./scripts/run_load.sh $FILE $OUTPUT peneloop 1
+elif [[ "$MODE" = "ulysses" ]]; then
+  ./scripts/run_load.sh $FILE $OUTPUT ulysses 1
 fi
 
 # kill servers & proxies

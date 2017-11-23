@@ -1,30 +1,30 @@
 {
-  "name": "peneloop-tpf",
+  "name": "ulysses-tpf",
   "version": "1.0.0",
-  "description": "Adaptive PeNeLoop algorithm for replicated TPF servers",
-  "main": "./src/peneloop-iterator.js",
+  "description": "Ulysses smart client for replicated Triple Pattern Fragments",
+  "main": "./src/ulysses-iterator.js",
   "bin": {
-    "peneloop-tpf": "./bin/peneloop-tpf.js"
+    "ulysses-tpf": "./bin/ulysses-tpf.js"
   },
   "scripts": {
-    "doc": "docma -s peneloop:src/*.js -d docs/",
+    "doc": "docma -s ulysses:src/*.js -d docs/",
     "test": "jest --notify"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Callidon/peneloop-tpf.git"
+    "url": "git+https://github.com/Callidon/ulysses-tpf.git"
   },
   "keywords": [
     "TPF",
-    "peneloop",
+    "ulysses",
     "adaptive load balancing"
   ],
   "author": "Thomas Minier <thomas.minier@univ-nantes.fr>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Callidon/peneloop-tpf/issues"
+    "url": "https://github.com/Callidon/ulysses-tpf/issues"
   },
-  "homepage": "https://github.com/Callidon/peneloop-tpf#readme",
+  "homepage": "https://github.com/Callidon/ulysses-tpf#readme",
   "dependencies": {
     "commander": "^2.11.0",
     "http-proxy": "^1.16.2",
