@@ -28,7 +28,7 @@ SOFTWARE.
 const fs = require('fs')
 const path = require('path')
 const program = require('commander')
-const PeneloopIterator = require('../src/peneloop-iterator.js')
+const UlyssesIterator = require('../src/ulysses-iterator.js')
 
 // Command line interface to execute queries
 program
@@ -43,7 +43,7 @@ program
 
 // get servers
 if (program.args.length <= 0) {
-  process.stderr.write('Error: you must specify at least one TPF server to use.\nSee peneloop-tpf --help for more details.\n')
+  process.stderr.write('Error: you must specify at least one TPF server to use.\nSee ulysses-tpf --help for more details.\n')
   process.exit(1)
 }
 
@@ -63,7 +63,7 @@ if (program.query) {
   process.exit(1)
 }
 
-const iterator = PeneloopIterator(query, servers, config)
+const iterator = UlyssesIterator(query, servers, config)
 iterator.on('error', error => {
   process.stderr.write('ERROR: An error occurred during query execution.\n')
   process.stderr.write(error.stack)
@@ -78,9 +78,10 @@ iterator.on('end', () => {
   }
 })
 const startTime = Date.now()
-iterator.on('data', data => process.stdout.write(JSON.stringify(data) + '\n'))
+iterator.on('data', data => process.stdout.write(`${JSON.stringify(data)}\n`))
 
 // set query timeout
 timeout = setTimeout(() => {
   iterator.close()
+  process.stderr.write(`TIMEOUT EXCEEDED ${program.timeout}: shutting down query processing...\n`)
 }, program.timeout)

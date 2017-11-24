@@ -35,13 +35,13 @@ ULY_3S_1="${ULY_3S}-run1"
 ULY_3S_2="${ULY_3S}-run2"
 ULY_3S_3="${ULY_3S}-run3"
 
-mkdir -p TPF_1S_1 TPF_1S_2 TPF_1S_3
-mkdir -p TPF_2S_1 TPF_2S_2 TPF_2S_3
-mkdir -p TPF_3S_1 TPF_3S_2 TPF_3S_3
+mkdir -p $TPF_1S_1 $TPF_1S_2 $TPF_1S_3
+mkdir -p $TPF_2S_1 $TPF_2S_2 $TPF_2S_3
+mkdir -p $TPF_3S_1 $TPF_3S_2 $TPF_3S_3
 
-mkdir -p ULY_1S_1 ULY_1S_2 ULY_1S_3
-mkdir -p ULY_2S_1 ULY_2S_2 ULY_2S_3
-mkdir -p ULY_3S_1 ULY_3S_2 ULY_3S_3
+mkdir -p $ULY_1S_1 $ULY_1S_2 $ULY_1S_3
+mkdir -p $ULY_2S_1 $ULY_2S_2 $ULY_2S_3
+mkdir -p $ULY_3S_1 $ULY_3S_2 $ULY_3S_3
 
 # launch TPF servers
 ldf-server $ldf_config 4000 4 &
@@ -64,27 +64,27 @@ pids+=($!)
 sleep 5
 
 # run workload with TPF (1 & 2 & 3 servers)
-./scripts/exec_time/run_workload_ref.sh $query_file TPF_1S_1 1
-./scripts/exec_time/run_workload_ref.sh $query_file TPF_1S_2 1
-./scripts/exec_time/run_workload_ref.sh $query_file TPF_1S_3 1
+./scripts/exec_time/run_workload.sh tpf $query_file $TPF_1S_1 1 $reference_results
+./scripts/exec_time/run_workload.sh tpf $query_file $TPF_1S_2 1 $reference_results
+./scripts/exec_time/run_workload.sh tpf $query_file $TPF_1S_3 1 $reference_results
 
-./scripts/exec_time/run_workload_ref.sh $query_file TPF_2S_1 2
-./scripts/exec_time/run_workload_ref.sh $query_file TPF_2S_2 2
-./scripts/exec_time/run_workload_ref.sh $query_file TPF_2S_3 2
+./scripts/exec_time/run_workload.sh tpf $query_file $TPF_2S_1 2 $reference_results
+./scripts/exec_time/run_workload.sh tpf $query_file $TPF_2S_2 2 $reference_results
+./scripts/exec_time/run_workload.sh tpf $query_file $TPF_2S_3 2 $reference_results
 
-./scripts/exec_time/run_workload_ref.sh $query_file TPF_3S_1 3
-./scripts/exec_time/run_workload_ref.sh $query_file TPF_3S_2 3
-./scripts/exec_time/run_workload_ref.sh $query_file TPF_3S_3 3
+./scripts/exec_time/run_workload.sh tpf $query_file $TPF_3S_1 3 $reference_results
+./scripts/exec_time/run_workload.sh tpf $query_file $TPF_3S_2 3 $reference_results
+./scripts/exec_time/run_workload.sh tpf $query_file $TPF_3S_3 3 $reference_results
 
 # run workload with ulysses (1 & 2 & 3 servers)
-./scripts/exec_time/run_workload_ulysses.sh $query_file ULY_1S_1 1 $reference_results
-./scripts/exec_time/run_workload_ulysses.sh $query_file ULY_1S_2 1 $reference_results
-./scripts/exec_time/run_workload_ulysses.sh $query_file ULY_1S_3 1 $reference_results
+./scripts/exec_time/run_workload.sh ulysses $query_file $ULY_1S_1 1 $reference_results
+./scripts/exec_time/run_workload.sh ulysses $query_file $ULY_1S_2 1 $reference_results
+./scripts/exec_time/run_workload.sh ulysses $query_file $ULY_1S_3 1 $reference_results
 
-./scripts/exec_time/run_workload_ulysses.sh $query_file ULY_2S_1 2 $reference_results
-./scripts/exec_time/run_workload_ulysses.sh $query_file ULY_2S_2 2 $reference_results
-./scripts/exec_time/run_workload_ulysses.sh $query_file ULY_2S_3 2 $reference_results
+./scripts/exec_time/run_workload.sh ulysses $query_file $ULY_2S_1 2 $reference_results
+./scripts/exec_time/run_workload.sh ulysses $query_file $ULY_2S_2 2 $reference_results
+./scripts/exec_time/run_workload.sh ulysses $query_file $ULY_2S_3 2 $reference_results
 
-./scripts/exec_time/run_workload_ulysses.sh $query_file ULY_3S_1 3 $reference_results
-./scripts/exec_time/run_workload_ulysses.sh $query_file ULY_3S_2 3 $reference_results
-./scripts/exec_time/run_workload_ulysses.sh $query_file ULY_3S_3 3 $reference_results
+./scripts/exec_time/run_workload.sh ulysses $query_file $ULY_3S_1 3 $reference_results
+./scripts/exec_time/run_workload.sh ulysses $query_file $ULY_3S_2 3 $reference_results
+./scripts/exec_time/run_workload.sh ulysses $query_file $ULY_3S_3 3 $reference_results

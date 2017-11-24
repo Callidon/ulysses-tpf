@@ -1,4 +1,4 @@
-/* file : peneloop-test.js
+/* file : ulysses-test.js
 MIT License
 
 Copyright (c) 2017 Thomas Minier
@@ -25,13 +25,13 @@ SOFTWARE.
 'use strict'
 
 const Model = require('../src/model/model.js')
-const peneloopRequester = require('../src/peneloop-request.js')
+const ulyssesRequester = require('../src/ulysses-request.js')
 
 describe('Peneloop requester', () => {
   const servers = [ 'http://fragments.dbpedia.org/2016-04/en', 'http://fragments.dbpedia.org/2015-10/en' ]
   it('should perform an HTTP request between servers using the cost-model', done => {
     const model = new Model(servers, [ 1.0, 1.0 ], { 'http://fragments.dbpedia.org/2016-04/en': 100, 'http://fragments.dbpedia.org/2015-10/en': 100 })
-    const requester = peneloopRequester(model)
+    const requester = ulyssesRequester(model)
     const httpRequest = requester({
       url: `${servers[0]}?hello=world`,
       method: 'GET',

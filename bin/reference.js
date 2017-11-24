@@ -75,13 +75,14 @@ iterator.on('end', () => {
   if (!program.silent) {
     const endTime = Date.now()
     const time = endTime - startTime
-    fs.appendFileSync(program.measure, (time / 1000) + '\n')
+    fs.appendFileSync(program.measure, time / 1000)
   }
 })
 const startTime = Date.now()
-iterator.on('data', data => process.stdout.write(JSON.stringify(data) + '\n'))
+iterator.on('data', data => process.stdout.write(`${JSON.stringify(data)}\n`))
 
 // set query timeout
 timeout = setTimeout(() => {
   iterator.close()
+  process.stderr.write(`TIMEOUT EXCEEDED (${program.timeout}ms) - shutting down query processing...\n`)
 }, program.timeout)

@@ -1,4 +1,4 @@
-/* file : peneloop-fragments-client.js
+/* file : ulysses-fragments-client.js
 MIT License
 
 Copyright (c) 2017 Thomas Minier
@@ -29,10 +29,10 @@ const LRU = require('lru-cache')
 const FragmentsClient = require('ldf-client/lib/triple-pattern-fragments/FragmentsClient')
 
 /**
- * A TPF FragmentsClient which apply the adaptive Peneloop load balancing at triple pattern level.
+ * A TPF FragmentsClient which apply the adaptive Ulysses load balancing at triple pattern level.
  * @author Thomas Minier
  */
-class PeneloopFragmentsClient {
+class UlyssesFragmentsClient {
   /**
    * Constructor
    * @param  {Model}  model - The model associated with the SPARQL query currently evaluated
@@ -52,7 +52,7 @@ class PeneloopFragmentsClient {
   }
 
   /**
-   * Same as classic FragmentsClient#getFragmentByPattern, but done using adaptive Peneloop
+   * Same as classic FragmentsClient#getFragmentByPattern, but done using adaptive Ulysses
    * @param  {Object} pattern - Triple pattern requested
    * @param  {Object} sourcePattern -
    * @return {AsyncIterator} Iterator that evaluates the triple pattern against a TPF server
@@ -72,4 +72,4 @@ class PeneloopFragmentsClient {
   }
 }
 
-module.exports = PeneloopFragmentsClient
+module.exports = UlyssesFragmentsClient

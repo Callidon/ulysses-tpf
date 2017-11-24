@@ -1,4 +1,4 @@
-/* file : peneloop.js
+/* file : ulysses.js
 MIT License
 
 Copyright (c) 2017 Thomas Minier
@@ -29,13 +29,13 @@ const { URL } = require('url')
 const ldfRequester = require('ldf-client/lib/util/Request')
 
 /**
- * Create a request function that use the adaptive peneloop load balancing
+ * Create a request function that use the adaptive ulysses load balancing
  * @author Thomas Minier
  * @param  {Model}  model - The model associated with the SPARQL query currently evaluated
  * @param  {Boolean} [recordOnly=true] - Set recordOnly to False if you want to perform load balancing at HTTP level
  * @return {function} The request function used by the TPF client to perform HTTP request
  */
-function createPeneloopRequest (model, recordOnly = true) {
+function createUlyssesRequest (model, recordOnly = true) {
   return function (settings) {
     if (!recordOnly) {
       // recompute model, then select random target TPF server according to the cost-model
@@ -59,4 +59,4 @@ function createPeneloopRequest (model, recordOnly = true) {
   }
 }
 
-module.exports = createPeneloopRequest
+module.exports = createUlyssesRequest
