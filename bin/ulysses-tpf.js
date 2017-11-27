@@ -39,6 +39,7 @@ program
   .option('-t, --timeout <timeout>', 'set SPARQL query timeout in milliseconds (default: 30mn)', 30 * 60 * 1000)
   .option('-m, --measure <output>', 'measure the query execution time (in seconds) & append it to a file', './execution_times.csv')
   .option('-s, --silent', 'do not perform any measurement (silent mode)', false)
+  .option('-r, --record', 'enable record mode, which output enhanced data in CSV for data analysis')
   .parse(process.argv)
 
 // get servers
@@ -77,8 +78,24 @@ iterator.on('end', () => {
     fs.appendFileSync(program.measure, time / 1000)
   }
 })
+
+let id = 0 // id for results in record mode
 const startTime = Date.now()
-iterator.on('data', data => process.stdout.write(`${JSON.stringify(data)}\n`))
+
+// output CSV headers in record mode
+if (program.record) {
+  process.stdout.write('id,timestamp\n')
+}
+
+iterator.on('data', data => {
+  const timestamp = Date.now() - startTime
+  if (program.record) {
+    process.stdout.write(`${id},${timestamp}\n`)
+  } else {
+    process.stdout.write(`${JSON.stringify(data)}\n`)
+  }
+  id++
+})
 
 // set query timeout
 timeout = setTimeout(() => {

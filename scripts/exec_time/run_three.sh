@@ -43,6 +43,8 @@ mkdir -p $ULY_1S_1 $ULY_1S_2 $ULY_1S_3
 mkdir -p $ULY_2S_1 $ULY_2S_2 $ULY_2S_3
 mkdir -p $ULY_3S_1 $ULY_3S_2 $ULY_3S_3
 
+pids=()
+
 # launch TPF servers
 ldf-server $ldf_config 4000 4 &
 pids+=($!)
@@ -88,3 +90,7 @@ sleep 5
 ./scripts/exec_time/run_workload.sh ulysses $query_file $ULY_3S_1 3 $reference_results
 ./scripts/exec_time/run_workload.sh ulysses $query_file $ULY_3S_2 3 $reference_results
 ./scripts/exec_time/run_workload.sh ulysses $query_file $ULY_3S_3 3 $reference_results
+
+# kill servers & proxies
+sleep 5
+kill -9 ${pids[@]} > /dev/null 2> /dev/null

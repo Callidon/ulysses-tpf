@@ -25,13 +25,13 @@ SOFTWARE.
 'use strict'
 
 const http = require('http')
+const { URL } = require('url')
 const HttpProxy = require('http-proxy')
 const program = require('commander')
 
 program
-  .description('deploy a reverse proxy that add latency to every HTTP call')
-  .usage('<target> <delay>')
-  .option('-p, --port <port>', 'the port on which the reverse proxy will be running (default http://localhost:3000)', 3000)
+  .description('Deploy a reverse proxy that add latency to every HTTP call')
+  .usage('<target> <port> <delay>')
   .parse(process.argv)
 
 if (program.args.length < 2) {
@@ -42,15 +42,62 @@ if (program.args.length < 2) {
 const proxyConfig = {
   target: program.args[0]
 }
-
-const delay = parseInt(program.args[1]) || 30
+const proxyPort = program.args[1]
+let fakeDeath = false
+let delay = parseInt(program.args[2])
+const baseDelay = parseInt(program.args[2])
 
 const proxy = HttpProxy.createProxyServer()
 const proxyServer = http.createServer((req, res) => {
-  setTimeout(() => {
-    proxy.web(req, res, proxyConfig)
-  }, delay)
+  if (fakeDeath && req.url !== '/revive') {
+    res.writeHead(500, { 'Content-Type': 'text/plain' })
+    res.write('I\'m faking death, don\'t tell my mom!\n')
+    res.end()
+    return
+  }
+  const url = new URL(proxyConfig.target + req.url)
+  switch (url.pathname) {
+    case '/setLatency': {
+      if (url.searchParams.has('value')) {
+        delay = parseInt(url.searchParams.get('value'))
+        process.stdout.write(`Latency of proxy running on port ${proxyPort} updated to ${delay}ms\n`)
+      }
+      res.writeHead(200, { 'Content-Type': 'text/plain' })
+      res.write('Latency successfully updated!\n')
+      res.end()
+      break
+    }
+    case '/resetLatency': {
+      delay = baseDelay
+      process.stdout.write(`Latency of proxy running on port ${proxyPort} reset to ${delay}ms\n`)
+      res.writeHead(200, { 'Content-Type': 'text/plain' })
+      res.write('Latency successfully reset!\n')
+      res.end()
+      break
+    }
+    case '/fakeDeath': {
+      fakeDeath = true
+      process.stdout.write(`Proxy running on port ${proxyPort} is now faking death\n`)
+      res.writeHead(200, { 'Content-Type': 'text/plain' })
+      res.write('Proxy is now faking death!\n')
+      res.end()
+      break
+    }
+    case '/revive': {
+      fakeDeath = false
+      process.stdout.write(`Proxy running on port ${proxyPort} is back online\n`)
+      res.writeHead(200, { 'Content-Type': 'text/plain' })
+      res.write('Proxy is back online!\n')
+      res.end()
+      break
+    }
+    default: {
+      setTimeout(() => {
+        proxy.web(req, res, proxyConfig)
+      }, delay)
+    }
+  }
 })
 
-process.stdout.write(`Latency (delay: ${delay}) proxy up and running at http://localhost:${program.port}\n`)
-proxyServer.listen(program.port)
+process.stdout.write(`Latency (delay: ${delay}) proxy up and running at http://localhost:${proxyPort}\n`)
+proxyServer.listen(proxyPort)
