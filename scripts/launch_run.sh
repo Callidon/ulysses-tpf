@@ -41,23 +41,23 @@ sleep 5
 # launch latency proxies
 scripts/latency_proxy.js http://localhost:4000 3000 $LATENCY &
 pids+=($!)
-scripts/latency_proxy.js http://localhost:4001 3000 $LATENCY &
+scripts/latency_proxy.js http://localhost:4001 3001 $LATENCY &
 pids+=($!)
-scripts/latency_proxy.js http://localhost:4002 3000 $LATENCY &
+scripts/latency_proxy.js http://localhost:4002 3002 $LATENCY &
 pids+=($!)
-scripts/latency_proxy.js http://localhost:4003 3000 $LATENCY &
+scripts/latency_proxy.js http://localhost:4003 3003 $LATENCY &
 pids+=($!)
-scripts/latency_proxy.js http://localhost:4004 3000 $LATENCY &
+scripts/latency_proxy.js http://localhost:4004 3004 $LATENCY &
 pids+=($!)
-scripts/latency_proxy.js http://localhost:4005 3000 $LATENCY &
+scripts/latency_proxy.js http://localhost:4005 3005 $LATENCY &
 pids+=($!)
-scripts/latency_proxy.js http://localhost:4006 3000 $LATENCY &
+scripts/latency_proxy.js http://localhost:4006 3006 $LATENCY &
 pids+=($!)
-scripts/latency_proxy.js http://localhost:4007 3000 $LATENCY &
+scripts/latency_proxy.js http://localhost:4007 3007 $LATENCY &
 pids+=($!)
-scripts/latency_proxy.js http://localhost:4008 3000 $LATENCY &
+scripts/latency_proxy.js http://localhost:4008 3008 $LATENCY &
 pids+=($!)
-scripts/latency_proxy.js http://localhost:4009 3000 $LATENCY &
+scripts/latency_proxy.js http://localhost:4009 3009 $LATENCY &
 pids+=($!)
 
 sleep 5
