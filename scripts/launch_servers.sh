@@ -13,17 +13,17 @@ if [ "$#" -ne 3 ]; then
 fi
 
 SPORT=4000 # server port
-# PPORT=3000 # proxy port
+PPORT=3000 # proxy port
 
 for i in $(seq 1 $NB); do
   ldf-server $CONFIG ${SPORT} 4 &
   pids+=($!)
-  sleep 5
-  scripts/latency_proxy.js http://localhost:${SPORT} $LATENCY ${PPORT} &
+  sleep 2
+  scripts/latency_proxy.js http://localhost:${SPORT} ${PPORT} $LATENCY &
   pids+=($!)
   SPORT=$((SPORT+1))
   PPORT=$((PPORT+1))
-  sleep 5
+  sleep 2
 done
 
 echo ${pids[@]}
