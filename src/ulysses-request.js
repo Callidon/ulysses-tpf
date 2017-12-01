@@ -26,7 +26,44 @@ SOFTWARE.
 
 const { isUndefined, sample } = require('lodash')
 const { URL } = require('url')
-const ldfRequester = require('ldf-client/lib/util/Request')
+const EventEmitter = require('events')
+const ldfRequester = require('./ldf-request.js')
+
+function evaluateTPQ (settings, model, recordOnly = true) {
+  const proxy = new EventEmitter()
+  proxy.pipe = function (dest) {
+    dest.on('response', resp => proxy.emit('response', resp))
+  }
+  if (!recordOnly) {
+    // recompute model, then select random target TPF server according to the cost-model
+    model.computeModel()
+    const searchParams = new URL(settings.url).search
+    const selectedServer = sample(model.getRNGVector())
+    settings.url = `${selectedServer}${searchParams}`
+    if (!isUndefined(settings.headers)) {
+      settings.headers.referer = selectedServer
+    }
+  }
+  const url = settings.url.split('?').shift()
+  const startTime = Date.now()
+  const request = ldfRequester(settings)
+  proxy.abort = function () { request.abort() }
+  // update model on response, then forward query
+  request.on('response', response => {
+    const endTime = Date.now() - startTime
+    model.setResponseTime(url, endTime)
+    // forward response
+    proxy.emit('response', response)
+  })
+  request.on('error', (err, failedURL) => {
+    // remove failed server
+    const server = new URL(failedURL).origin
+    model.removeServer(server, err)
+    // retry request
+    proxy.pipe(evaluateTPQ(settings, model, false))
+  })
+  return proxy
+}
 
 /**
  * Create a request function that use the adaptive ulysses load balancing
@@ -37,25 +74,7 @@ const ldfRequester = require('ldf-client/lib/util/Request')
  */
 function createUlyssesRequest (model, recordOnly = true) {
   return function (settings) {
-    if (!recordOnly) {
-      // recompute model, then select random target TPF server according to the cost-model
-      model.computeModel()
-      const searchParams = new URL(settings.url).search
-      const selectedServer = sample(model.getRNGVector())
-      settings.url = `${selectedServer}${searchParams}`
-      if (!isUndefined(settings.headers)) {
-        settings.headers.referer = selectedServer
-      }
-    }
-    const url = settings.url.split('?').shift()
-    const startTime = Date.now()
-    const request = ldfRequester(settings)
-    // update model on response
-    request.on('response', () => {
-      const endTime = Date.now() - startTime
-      model.setResponseTime(url, endTime)
-    })
-    return request
+    return evaluateTPQ(settings, model, recordOnly)
   }
 }
 
