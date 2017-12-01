@@ -45,9 +45,14 @@ class UlyssesFragmentsClient {
     this._selection = selection
     this._options = options
     this._clients = new Map()
-    this._options.cache = new LRU({ max: 5000 })
+    this._cache = {
+      set: function () {},
+      has: function () { return false },
+      get: function () { return undefined }
+    }// new LRU({ max: 5000 })
     servers.forEach(url => {
       this._clients.set(url, new FragmentsClient(url, this._options))
+      this._clients.get(url)._cache = this._cache
     })
   }
 

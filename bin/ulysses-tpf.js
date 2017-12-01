@@ -38,7 +38,7 @@ program
   .option('-f, --file <file>', 'evaluates the SPARQL query in the given file')
   .option('-t, --timeout <timeout>', 'set SPARQL query timeout in milliseconds (default: 30mn)', 30 * 60 * 1000)
   .option('-m, --measure <output>', 'measure the query execution time (in seconds) & append it to a file', './execution_times.csv')
-  .option('-s, --silent', 'do not perform any measurement (silent mode)', false)
+  .option('-s, --silent', 'do not perform any measurement on execution time ', false)
   .option('-r, --record', 'enable record mode, which output enhanced data in CSV for data analysis')
   .parse(process.argv)
 
@@ -51,6 +51,7 @@ if (program.args.length <= 0) {
 const servers = program.args
 const configFile = path.join(__dirname, '../node_modules/ldf-client/config-default.json')
 const config = JSON.parse(fs.readFileSync(configFile, { encoding: 'utf8' }))
+config.recordMode = program.record
 
 // fetch SPARQL query to execute
 let query = null
@@ -79,22 +80,20 @@ iterator.on('end', () => {
   }
 })
 
-let id = 0 // id for results in record mode
 const startTime = Date.now()
 
 // output CSV headers in record mode
 if (program.record) {
-  process.stdout.write('id,timestamp\n')
+  iterator.on('http_request', (url, time) => {
+    const timestamp = Date.now() - startTime
+    process.stdout.write(`"${url}",${timestamp},${time}\n`)
+  })
 }
 
 iterator.on('data', data => {
-  const timestamp = Date.now() - startTime
-  if (program.record) {
-    process.stdout.write(`${id},${timestamp}\n`)
-  } else {
+  if (!program.record) {
     process.stdout.write(`${JSON.stringify(data)}\n`)
   }
-  id++
 })
 
 // set query timeout

@@ -46,6 +46,11 @@ function ulyssesIterator (query, servers, config = {}) {
   Promise.all([modelRepo.getModel(servers), sourceSelection(query, servers)])
   .then(res => {
     const model = res[0]
+    if (config.recordMode) {
+      model.on('updated_time', (url, value) => {
+        iterator.emit('http_request', url, value)
+      })
+    }
     const selection = res[1]
     config.request = ulyssesRequester(model)
     config.fragmentsClient = new UlyssesFragmentsClient(model, servers, selection, config)
