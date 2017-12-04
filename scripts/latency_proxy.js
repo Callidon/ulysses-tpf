@@ -50,51 +50,53 @@ const baseDelay = parseInt(program.args[2])
 const proxy = HttpProxy.createProxyServer()
 const proxyServer = http.createServer((req, res) => {
   if (fakeDeath && req.url !== '/revive') {
-    res.writeHead(404, { 'Content-Type': 'text/plain' })
-    res.write('I\'m faking death, don\'t tell my mom!\n')
-    res.end()
-    return
-  }
-  const url = new URL(proxyConfig.target + req.url)
-  switch (url.pathname) {
-    case '/setLatency': {
-      if (url.searchParams.has('value')) {
-        delay = parseInt(url.searchParams.get('value'))
-        process.stdout.write(`Latency of proxy running on port ${proxyPort} updated to ${delay}ms\n`)
+    setTimeout(() => {
+      res.writeHead(404, { 'Content-Type': 'text/plain' })
+      res.write('I\'m faking death, don\'t tell my mom!\n')
+      res.end()
+    }, delay)
+  } else {
+    const url = new URL(proxyConfig.target + req.url)
+    switch (url.pathname) {
+      case '/setLatency': {
+        if (url.searchParams.has('value')) {
+          delay = parseInt(url.searchParams.get('value'))
+          process.stdout.write(`Latency of proxy running on port ${proxyPort} updated to ${delay}ms\n`)
+        }
+        res.writeHead(200, { 'Content-Type': 'text/plain' })
+        res.write('Latency successfully updated!\n')
+        res.end()
+        break
       }
-      res.writeHead(200, { 'Content-Type': 'text/plain' })
-      res.write('Latency successfully updated!\n')
-      res.end()
-      break
-    }
-    case '/resetLatency': {
-      delay = baseDelay
-      process.stdout.write(`Latency of proxy running on port ${proxyPort} reset to ${delay}ms\n`)
-      res.writeHead(200, { 'Content-Type': 'text/plain' })
-      res.write('Latency successfully reset!\n')
-      res.end()
-      break
-    }
-    case '/fakeDeath': {
-      fakeDeath = true
-      process.stdout.write(`Proxy running on port ${proxyPort} is now faking death\n`)
-      res.writeHead(200, { 'Content-Type': 'text/plain' })
-      res.write('Proxy is now faking death!\n')
-      res.end()
-      break
-    }
-    case '/revive': {
-      fakeDeath = false
-      process.stdout.write(`Proxy running on port ${proxyPort} is back online\n`)
-      res.writeHead(200, { 'Content-Type': 'text/plain' })
-      res.write('Proxy is back online!\n')
-      res.end()
-      break
-    }
-    default: {
-      setTimeout(() => {
-        proxy.web(req, res, proxyConfig)
-      }, delay)
+      case '/resetLatency': {
+        delay = baseDelay
+        process.stdout.write(`Latency of proxy running on port ${proxyPort} reset to ${delay}ms\n`)
+        res.writeHead(200, { 'Content-Type': 'text/plain' })
+        res.write('Latency successfully reset!\n')
+        res.end()
+        break
+      }
+      case '/fakeDeath': {
+        fakeDeath = true
+        process.stdout.write(`Proxy running on port ${proxyPort} is now faking death\n`)
+        res.writeHead(200, { 'Content-Type': 'text/plain' })
+        res.write('Proxy is now faking death!\n')
+        res.end()
+        break
+      }
+      case '/revive': {
+        fakeDeath = false
+        process.stdout.write(`Proxy running on port ${proxyPort} is back online\n`)
+        res.writeHead(200, { 'Content-Type': 'text/plain' })
+        res.write('Proxy is back online!\n')
+        res.end()
+        break
+      }
+      default: {
+        setTimeout(() => {
+          proxy.web(req, res, proxyConfig)
+        }, delay)
+      }
     }
   }
 })
