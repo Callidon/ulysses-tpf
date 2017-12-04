@@ -48,9 +48,6 @@ describe('ModelRepository', () => {
         'http://example.first.org/en': 100,
         'http://example.second.org/en': 200
       })
-      expect(model.getCoefficient('http://example.first.org/en')).toBe(1)
-      expect(model.getCoefficient('http://example.second.org/en')).toBe(1)
-      expect(model._sumCoefs).toBe(2)
       done()
     })
     .catch(done)
@@ -76,6 +73,31 @@ describe('ModelRepository', () => {
       })
       expect(submodel.getCoefficient('http://example.second.org/en')).toBe(1)
       expect(submodel._sumCoefs).toBe(1)
+      done()
+    })
+    .catch(done)
+  })
+
+  it('should be able to remove servers from models', done => {
+    const repo = new ModelRepository()
+    const servers = [ 'http://example.first.org/en', 'http://example.second.org/en' ]
+
+    // setup mocks
+    const triple = { predicate: 'http://dbpedia.org/property/page' }
+    mockPages({}, 'http://example.first.org', 'en', { delay: 10, pageSize: 100 })
+    mockPages({}, 'http://example.second.org', 'en', { delay: 10, pageSize: 200 })
+    mockPages(triple, 'http://example.first.org', 'en', { cardinality: 1420, pageSize: 100 })
+    mockPages(triple, 'http://example.second.org', 'en', { cardinality: 1420, pageSize: 200 })
+
+    repo.getModel(servers)
+    .then(model => {
+      model.removeServer('http://example.first.org/en')
+      expect(model._servers).toEqual([ 'http://example.second.org/en' ])
+      expect(model._triplesPerPage).toEqual({
+        'http://example.second.org/en': 200
+      })
+      expect(model.getCoefficient('http://example.second.org/en')).toBe(1)
+      expect(model._sumCoefs).toBe(1)
       done()
     })
     .catch(done)

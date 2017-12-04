@@ -29,12 +29,19 @@ const { URL } = require('url')
 const EventEmitter = require('events')
 const ldfRequester = require('./ldf-request.js')
 
-function evaluateTPQ (settings, model, recordOnly = true) {
+/**
+ * Evaluate a TPQ
+ * @param  {Object}  settings - HTTP Request settings
+ * @param  {Model}  model - The model associated with the SPARQL query currently evaluated
+ * @param  {Boolean} [selectServer=false] - Set to True if the requester should select a target using the cost model
+ * @return {EventEmitter} A pipeline that emits data form the HTTP response
+ */
+function evaluateTPQ (settings, model, selectServer = false) {
   const proxy = new EventEmitter()
   proxy.pipe = function (dest) {
     dest.on('response', resp => proxy.emit('response', resp))
   }
-  if (!recordOnly) {
+  if (selectServer) {
     // recompute model, then select random target TPF server according to the cost-model
     model.computeModel()
     const searchParams = new URL(settings.url).search
@@ -60,7 +67,7 @@ function evaluateTPQ (settings, model, recordOnly = true) {
     const server = new URL(failedURL).origin
     model.removeServer(server, err)
     // retry request
-    proxy.pipe(evaluateTPQ(settings, model, false))
+    proxy.pipe(evaluateTPQ(settings, model, true))
   })
   return proxy
 }
@@ -69,12 +76,11 @@ function evaluateTPQ (settings, model, recordOnly = true) {
  * Create a request function that use the adaptive ulysses load balancing
  * @author Thomas Minier
  * @param  {Model}  model - The model associated with the SPARQL query currently evaluated
- * @param  {Boolean} [recordOnly=true] - Set recordOnly to False if you want to perform load balancing at HTTP level
  * @return {function} The request function used by the TPF client to perform HTTP request
  */
-function createUlyssesRequest (model, recordOnly = true) {
+function createUlyssesRequest (model) {
   return function (settings) {
-    return evaluateTPQ(settings, model, recordOnly)
+    return evaluateTPQ(settings, model)
   }
 }
 

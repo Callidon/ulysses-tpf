@@ -102,6 +102,19 @@ class Model extends EventEmitter {
   }
 
   /**
+   * Remove a server from the model
+   * @param  {string} url - URL of the server to remove
+   * @return {void}
+   */
+  removeServer (url) {
+    const ind = this._servers.indexOf(url)
+    this._servers.splice(ind, 1)
+    delete this._times[url]
+    delete this._triplesPerPage[url]
+    this.computeModel()
+  }
+
+  /**
    * Return a subset of the model for a given set of servers
    * @param {string[]} servers - Set of servers used to filter the model
    * @return {Model} A submodel
