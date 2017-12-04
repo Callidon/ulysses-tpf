@@ -50,7 +50,7 @@ const baseDelay = parseInt(program.args[2])
 const proxy = HttpProxy.createProxyServer()
 const proxyServer = http.createServer((req, res) => {
   if (fakeDeath && req.url !== '/revive') {
-    res.writeHead(500, { 'Content-Type': 'text/plain' })
+    res.writeHead(404, { 'Content-Type': 'text/plain' })
     res.write('I\'m faking death, don\'t tell my mom!\n')
     res.end()
     return

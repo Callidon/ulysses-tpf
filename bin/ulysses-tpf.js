@@ -51,6 +51,7 @@ if (program.args.length <= 0) {
 const servers = program.args
 const configFile = path.join(__dirname, '../node_modules/ldf-client/config-default.json')
 const config = JSON.parse(fs.readFileSync(configFile, { encoding: 'utf8' }))
+config.recordMode = program.record
 config.noCache = true
 
 // fetch SPARQL query to execute
