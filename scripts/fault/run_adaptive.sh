@@ -1,5 +1,5 @@
 #!/bin/bash
-# run three times the experiment with throughput
+# run load adaption experiment
 
 QUERY=$1
 OUTPUT=$2
@@ -22,7 +22,7 @@ for x in $(seq 1 $NBSERVERS); do
 done
 
 RESFILE="${OUTPUT}/load_increase_${NBSERVERS}servers.csv"
-echo "target,timestamp,time" > $RESFILE
+echo "target,timestamp,time,realTime" > $RESFILE
 
 sleep 5
 

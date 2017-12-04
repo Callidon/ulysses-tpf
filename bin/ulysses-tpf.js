@@ -85,9 +85,9 @@ const startTime = Date.now()
 
 // output CSV headers in record mode
 if (program.record) {
-  iterator.on('http_request', (url, time) => {
+  iterator.on('http_request', (url, time, realTime) => {
     const timestamp = Date.now() - startTime
-    process.stdout.write(`"${url}",${timestamp},${time}\n`)
+    process.stdout.write(`"${url}",${timestamp},${time},${realTime}\n`)
   })
 }
 

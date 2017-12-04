@@ -1,4 +1,4 @@
-# Draw throughput plots
+# Draw load adaption plot
 # Author: Thomas Minier
 using Gadfly
 using Compose

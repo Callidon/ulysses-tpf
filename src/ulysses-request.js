@@ -39,7 +39,7 @@ const ldfRequester = require('./ldf-request.js')
 function evaluateTPQ (settings, model, selectServer = false) {
   const proxy = new EventEmitter()
   proxy.pipe = function (dest) {
-    dest.on('response', resp => proxy.emit('response', resp))
+    dest.on('response', (resp, t) => proxy.emit('response', resp, t))
   }
   if (selectServer) {
     // recompute model, then select random target TPF server according to the cost-model
@@ -56,15 +56,15 @@ function evaluateTPQ (settings, model, selectServer = false) {
   const request = ldfRequester(settings)
   proxy.abort = function () { request.abort() }
   // update model on response, then forward query
-  request.on('response', response => {
+  request.on('response', (response, realTime) => {
     const endTime = Date.now() - startTime
-    model.setResponseTime(url, endTime)
+    model.setResponseTime(url, endTime, realTime)
     // forward response
-    proxy.emit('response', response)
+    proxy.emit('response', response, realTime)
   })
   request.on('error', (err, failedURL) => {
     // remove failed server
-    const server = new URL(failedURL).origin
+    const server = failedURL.split('?').shift()
     model.removeServer(server, err)
     // retry request
     proxy.pipe(evaluateTPQ(settings, model, true))

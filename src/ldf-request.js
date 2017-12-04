@@ -29,11 +29,20 @@ function createRequest (settings) {
   const requestProxy = new EventEmitter()
   const requester = settings.protocol === 'http:' ? http : https
   settings.agents = AGENTS
+  if (_.isUndefined(settings.requestStartTime)) {
+    settings.requestStartTime = Date.now()
+  }
   request = requester.request(settings, function (response) {
-    response = decode(response)
-    response.setEncoding('utf8')
-    response.pause() // exit flow mode
-    requestProxy.emit('response', response)
+    const realTime = Date.now() - settings.requestStartTime
+    if (response.statusCode !== 200) {
+      requestProxy.emit('error', 'ERROR 404', settings.url)
+      request.abort()
+    } else {
+      response = decode(response)
+      response.setEncoding('utf8')
+      response.pause() // exit flow mode
+      requestProxy.emit('response', response, realTime)
+    }
   })
   // catch errors
   request.on('error', err => {

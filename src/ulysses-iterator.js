@@ -47,8 +47,8 @@ function ulyssesIterator (query, servers, config = {}) {
   .then(res => {
     const model = res[0]
     if (config.recordMode) {
-      model.on('updated_time', (url, value) => {
-        iterator.emit('http_request', url, value)
+      model.on('updated_time', (url, execTime, realTime) => {
+        iterator.emit('http_request', url, execTime, realTime)
       })
     }
     const selection = res[1]

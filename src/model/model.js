@@ -108,10 +108,12 @@ class Model extends EventEmitter {
    */
   removeServer (url) {
     const ind = this._servers.indexOf(url)
-    this._servers.splice(ind, 1)
-    delete this._times[url]
-    delete this._triplesPerPage[url]
-    this.computeModel()
+    if (ind >= 0) {
+      this._servers.splice(ind, 1)
+      delete this._times[url]
+      delete this._triplesPerPage[url]
+      this.computeModel()
+    }
   }
 
   /**
@@ -149,11 +151,12 @@ class Model extends EventEmitter {
    * Set the reponse time for an endpoint
    * @param {string} endpoint - The endpoint
    * @param {number} time     - The new reponse time of the endpoint
+   * @param {number} realTime - Real execution of the last request sent to this server (!= of time in case of failover)
    * @return {void}
    */
-  setResponseTime (endpoint, time) {
+  setResponseTime (endpoint, time, realTime) {
     this._times[endpoint] = time
-    this.emit('updated_time', endpoint, time)
+    this.emit('updated_time', endpoint, time, realTime)
   }
 
   /**
@@ -184,6 +187,7 @@ class Model extends EventEmitter {
    * @return {string[]} A randomized vector of servers URI
    */
   getRNGVector () {
+    if (this._servers.length === 1) return [ this._servers[0] ]
     const vector = values(this._coefficients).map(x => x / this._sumCoefs)
     return flatten(vector.map((p, ind) => times(p * 100, constant(this._servers[ind]))))
   }
