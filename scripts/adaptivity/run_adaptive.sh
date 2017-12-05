@@ -26,13 +26,9 @@ echo "target,timestamp,time,realTime" > $RESFILE
 
 sleep 5
 
-# wait 15s and then triple latency of S1 over 10s
-sleep 15 && GET http://curiosiphi:3000/setLatency?value=350 &
-sleep 20 && GET http://curiosiphi:3000/setLatency?value=400 &
-sleep 25 && GET http://curiosiphi:3000/setLatency?value=450 &
-sleep 30 && GET http://curiosiphi:3000/setLatency?value=500 &
+# wait 15s and then triple latency of S1
+sleep 20 && GET http://curiosiphi:3000/setLatency?value=900 &
+# wait 30s and then restore latency of S1 to 300ms
+# sleep 50 && GET http://curiosiphi:3000/resetLatency &
 
 ./bin/ulysses-tpf.js ${SERVERS[@]} -f $QUERY -s -r >> $RESFILE 2> $OUTPUT/errors.err
-
-# reset S1 latency
-GET http://curiosiphi:3000/resetLatency
