@@ -49,4 +49,4 @@ circle_2 = Guide.annotation(compose(context(), circle(20.0, load_2servers[21, :x
 
 p = plot(load_2servers, x=:timestamp, y=:x1, Geom.line, Geom.point, annot_1, annot_2, circle_1, circle_2,
 Guide.xticks(ticks=[0,5,10,15,20,25,30,35,40,45,50]), Guide.xlabel("Elapsed time (seconds)"), Guide.ylabel("Average HTTP response time (ms)"))
-draw(PDF("scripts/fault/fault_tolerance.pdf", 8inch, 4inch), p)
+draw(PDF("scripts/fault/fault_tolerance.pdf", 7inch, 3.5inch), p)

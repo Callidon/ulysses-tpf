@@ -18,33 +18,33 @@ end
 
 time_ref = computeMean(
     :time,
-    "curio/run1/execution_times_ref.csv",
-    "curio/run2/execution_times_ref.csv",
-    "curio/run3/execution_times_ref.csv"
+    "scripts/curio/run1/execution_times_ref.csv",
+    "scripts/curio/run2/execution_times_ref.csv",
+    "scripts/curio/run3/execution_times_ref.csv"
 )
 time_ref[:approach] = "1 (TPF) "
 
 time_2s = computeMean(
     :time,
-    "curio/run1/execution_times_2servers.csv",
-    "curio/run2/execution_times_2servers.csv",
-    "curio/run3/execution_times_2servers.csv"
+    "scripts/curio/run1/execution_times_2servers.csv",
+    "scripts/curio/run2/execution_times_2servers.csv",
+    "scripts/curio/run3/execution_times_2servers.csv"
 )
 time_2s[:approach] = "2"
 
 time_3s = computeMean(
     :time,
-    "curio/run1/execution_times_3servers.csv",
-    "curio/run2/execution_times_3servers.csv",
-    "curio/run3/execution_times_3servers.csv"
+    "scripts/curio/run1/execution_times_3servers.csv",
+    "scripts/curio/run2/execution_times_3servers.csv",
+    "scripts/curio/run3/execution_times_3servers.csv"
 )
 time_3s[:approach] = "3"
 
 time_20s = computeMean(
     :time,
-    "curio/run1/execution_times_20servers.csv",
-    "curio/run2/execution_times_20servers.csv",
-    "curio/run3/execution_times_20servers.csv"
+    "scripts/curio/run1/execution_times_20servers.csv",
+    "scripts/curio/run2/execution_times_20servers.csv",
+    "scripts/curio/run3/execution_times_20servers.csv"
 )
 time_20s[:approach] = "20"
 
@@ -58,5 +58,5 @@ p = plot(all, y=:time, x=:clients, color=:approach, Geom.smooth(method=:loess, s
 Guide.xlabel("Number of concurrent clients executing the query"), Guide.ylabel("Execution time (s)"), Guide.xticks(ticks=[1, 10, 20, 50, 100]),
 Guide.colorkey("Number of server(s)"), colors())
 
-draw(PDF("curio/execution_time_with_load.pdf", 7inch, 3inch), p)
-# draw(PNG("curio/execution_time_with_load.png", 15inch, 7inch), p)
+draw(PDF("scripts/curio/execution_time_with_load.pdf", 5inch, 3inch), p)
+# draw(PNG("scripts/curio/execution_time_with_load.png", 15inch, 7inch), p)

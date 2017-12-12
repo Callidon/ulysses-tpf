@@ -66,4 +66,4 @@ load_3servers = meanDF(:x1, map(process, files)...)
 p = plot(load_3servers, xgroup=:x2, x=:target, y=:x1, color=:target,
 Geom.subplot_grid(Geom.bar, Scale.x_discrete, free_x_axis=true),
 Guide.xlabel("Elapsed time (seconds)"), Guide.ylabel("Number of HTTP requests"), colors())
-draw(PDF("scripts/adaptivity/load_adaptivity.pdf", 8inch, 4inch), p)
+draw(PDF("scripts/adaptivity/load_adaptivity.pdf", 5inch, 3inch), p)
