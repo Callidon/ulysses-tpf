@@ -28,6 +28,8 @@ SOFTWARE.
 const fs = require('fs')
 const path = require('path')
 const program = require('commander')
+const { isUndefined } = require('lodash')
+const Selection = require('../src/sourc-selection/selection.js')
 const UlyssesIterator = require('../src/ulysses-iterator.js')
 
 // Command line interface to execute queries
@@ -40,11 +42,12 @@ program
   .option('-m, --measure <output>', 'measure the query execution time (in seconds) & append it to a file', './execution_times.csv')
   .option('-s, --silent', 'do not perform any measurement on execution time ', false)
   .option('-r, --record', 'enable record mode, which output enhanced data in CSV for data analysis')
+  .option('-c, --catalog <json-file>', 'pass a custom catalog contained in a JSON file')
   .parse(process.argv)
 
 // get servers
 if (program.args.length <= 0) {
-  process.stderr.write('Error: you must specify at least one TPF server to use.\nSee ulysses-tpf --help for more details.\n')
+  process.stderr.write('Error: you must specify at least one TPF server to use.\nSee ulysses-tpf.js --help for more details.\n')
   process.exit(1)
 }
 
@@ -53,6 +56,13 @@ const configFile = path.join(__dirname, '../node_modules/ldf-client/config-defau
 const config = JSON.parse(fs.readFileSync(configFile, { encoding: 'utf8' }))
 config.recordMode = program.record
 config.noCache = true
+if (!isUndefined(config.catalog)) {
+  const catalog = JSON.parse(fs.readFileSync(config.catalog, { encoding: 'utf8' }))
+  const selection = new Selection()
+  catalog.patterns.forEach(config => {
+    selection.set(config.pattern, config.servers)
+  })
+}
 
 // fetch SPARQL query to execute
 let query = null

@@ -70,11 +70,11 @@ class UlyssesFragmentsClient {
     // recompute model, then select the submodel corresponding to the pattern
     this._model.computeModel()
     let model = this._model
-    // let servers = this._selection.get(pattern)
-    // if (!isNull(servers) && !(isUndefined(servers))) {
-    //   if (servers.length === 1) return this._clients.get(servers[0]).getFragmentByPattern(pattern)
-    //   model = this._model.subset(servers)
-    // }
+    let servers = this._selection.get(pattern)
+    if (!isNull(servers) && !(isUndefined(servers))) {
+      if (servers.length === 1) return this._clients.get(servers[0]).getFragmentByPattern(pattern)
+      model = this._model.subset(servers)
+    }
     // select random target TPF server according to the cost-model
     const selectedServer = sample(model.getRNGVector())
     return this._clients.get(selectedServer).getFragmentByPattern(pattern)

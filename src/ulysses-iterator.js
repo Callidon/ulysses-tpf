@@ -51,7 +51,7 @@ function ulyssesIterator (query, servers, config = {}) {
         iterator.emit('http_request', url, execTime, realTime)
       })
     }
-    const selection = res[1]
+    const selection = config.selection || res[1]
     config.request = ulyssesRequester(model)
     config.fragmentsClient = new UlyssesFragmentsClient(model, servers, selection, config)
     iterator.source = new ldf.SparqlIterator(query, config)
