@@ -29,7 +29,7 @@ const fs = require('fs')
 const path = require('path')
 const program = require('commander')
 const { isUndefined } = require('lodash')
-const Selection = require('../src/sourc-selection/selection.js')
+const Selection = require('../src/source-selection/selection.js')
 const UlyssesIterator = require('../src/ulysses-iterator.js')
 
 // Command line interface to execute queries
@@ -56,12 +56,13 @@ const configFile = path.join(__dirname, '../node_modules/ldf-client/config-defau
 const config = JSON.parse(fs.readFileSync(configFile, { encoding: 'utf8' }))
 config.recordMode = program.record
 config.noCache = true
-if (!isUndefined(config.catalog)) {
-  const catalog = JSON.parse(fs.readFileSync(config.catalog, { encoding: 'utf8' }))
+if (!isUndefined(program.catalog)) {
+  const catalog = JSON.parse(fs.readFileSync(program.catalog, { encoding: 'utf8' }))
   const selection = new Selection()
   catalog.patterns.forEach(config => {
     selection.set(config.pattern, config.servers)
   })
+  config.selection = selection
 }
 
 // fetch SPARQL query to execute
