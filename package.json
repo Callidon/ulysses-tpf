@@ -7,7 +7,7 @@
     "ulysses-tpf": "./bin/ulysses-tpf.js"
   },
   "scripts": {
-    "doc": "docma -s ulysses:src/*.js -d docs/",
+    "build": "browserify -r ./src/ulysses-iterator.js:ulysses -t [ babelify --presets [ env ] --plugins [ transform-runtime ] ] -o ulysses.bundle.js",
     "test": "jest --notify"
   },
   "repository": {
@@ -33,6 +33,10 @@
     "request": "^2.83.0"
   },
   "devDependencies": {
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0",
+    "browserify": "^14.5.0",
     "jest": "^21.2.1",
     "nock": "^9.1.0",
     "standard": "^10.0.3"
