@@ -24,13 +24,27 @@ SOFTWARE.
 
 'use strict'
 
+const { URL } = require('url')
 const ldf = require('ldf-client')
 const { TransformIterator } = require('asynciterator')
 const ModelRepository = require('./model/model-repository.js')
 const UlyssesFragmentsClient = require('./ulysses-fragments-client.js')
 const ulyssesRequester = require('./ulysses-request.js')
 const sourceSelection = require('./source-selection/source-selection.js')
+const { patternContainment, stringifyPattern } = require('./utils.js')
+const { isEmpty } = require('lodash')
 ldf.Logger.setLevel('WARNING')
+
+// reverse engineer triple pattern contained in the url
+function urlToPattern (url, sourceSelection) {
+  const searchParams = new URL(url).searchParams
+  const pattern = {}
+  if (searchParams.has('subject')) pattern.subject = searchParams.get('subject')
+  if (searchParams.has('predicate')) pattern.predicate = searchParams.get('predicate')
+  if (searchParams.has('object')) pattern.object = searchParams.get('object')
+  if (isEmpty(pattern)) return pattern
+  return patternContainment(pattern, sourceSelection._references)
+}
 
 /**
  * Creates an Iterator that process a SPARQL query using Ulysses adaptive load balancing
@@ -46,12 +60,12 @@ function ulyssesIterator (query, servers, config = {}) {
   Promise.all([modelRepo.getModel(servers), sourceSelection(query, servers)])
   .then(res => {
     const model = res[0]
+    const selection = config.selection || res[1]
     if (config.recordMode) {
-      model.on('updated_time', (url, execTime, realTime) => {
-        iterator.emit('http_request', url, execTime, realTime)
+      model.on('updated_time', (server, execTime, realTime, url) => {
+        iterator.emit('http_request', server, execTime, realTime, stringifyPattern(urlToPattern(url, selection)))
       })
     }
-    const selection = config.selection || res[1]
     config.request = ulyssesRequester(model)
     config.fragmentsClient = new UlyssesFragmentsClient(model, servers, selection, config)
     iterator.source = new ldf.SparqlIterator(query, config)

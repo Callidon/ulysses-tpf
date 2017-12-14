@@ -1,0 +1,1 @@
+SELECT DISTINCT ?v0 ?v2 WHERE { ?v0 <http://xmlns.com/foaf/age> <http://db.uwaterloo.ca/~galuc/wsdbm/AgeGroup3> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/subscribes> ?v2 }

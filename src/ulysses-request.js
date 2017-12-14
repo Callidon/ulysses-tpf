@@ -58,7 +58,7 @@ function evaluateTPQ (settings, model, selectServer = false) {
   // update model on response, then forward query
   request.on('response', (response, realTime) => {
     const endTime = Date.now() - startTime
-    model.setResponseTime(url, endTime, realTime)
+    model.setResponseTime(url, endTime, realTime, settings.url)
     // forward response
     proxy.emit('response', response, realTime)
   })

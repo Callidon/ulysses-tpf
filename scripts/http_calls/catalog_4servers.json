@@ -7,8 +7,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -18,8 +18,8 @@
         "object": "?v2"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -29,8 +29,8 @@
         "object": "?v3"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -40,8 +40,8 @@
         "object": "?v3"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -51,8 +51,8 @@
         "object": "?v5"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -62,8 +62,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -73,8 +73,8 @@
         "object": "?v2"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -84,8 +84,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Language19"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -95,8 +95,8 @@
         "object": "?v4"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -106,8 +106,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -117,8 +117,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/AgeGroup0"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -128,8 +128,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -139,8 +139,8 @@
         "object": "?v2"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -150,8 +150,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Website4970"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -161,8 +161,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -172,8 +172,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -183,8 +183,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Genre16"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -194,8 +194,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -205,8 +205,8 @@
         "object": "?v0"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -216,8 +216,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory7"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -227,8 +227,8 @@
         "object": "?v3"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -238,8 +238,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -249,8 +249,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory4"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -260,8 +260,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Topic232"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -271,8 +271,8 @@
         "object": "?v2"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -282,8 +282,8 @@
         "object": "?v0"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -293,8 +293,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -304,8 +304,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -315,8 +315,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -326,8 +326,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -337,8 +337,8 @@
         "object": "?v2"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -348,8 +348,8 @@
         "object": "?v4"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -359,8 +359,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Topic196"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -370,8 +370,8 @@
         "object": "?v7"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -381,8 +381,8 @@
         "object": "?v3"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -392,8 +392,8 @@
         "object": "?v8"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -403,8 +403,8 @@
         "object": "?v5"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -414,8 +414,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -425,8 +425,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Review113987"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -436,8 +436,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -447,8 +447,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -458,8 +458,8 @@
         "object": "?v2"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -469,8 +469,8 @@
         "object": "?v2"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -480,8 +480,8 @@
         "object": "?v4"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -491,8 +491,8 @@
         "object": "?v5"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -502,8 +502,8 @@
         "object": "?v6"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -513,8 +513,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Language31"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -524,8 +524,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory6"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -535,8 +535,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Language16"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -546,8 +546,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Topic73"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -557,8 +557,8 @@
         "object": "?v2"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -568,8 +568,8 @@
         "object": "?v3"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -579,8 +579,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Website442"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -590,8 +590,8 @@
         "object": "?v0"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -601,8 +601,8 @@
         "object": "?v3"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -612,8 +612,8 @@
         "object": "?v0"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -623,8 +623,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -634,8 +634,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -645,8 +645,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -656,8 +656,8 @@
         "object": "?v2"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -667,8 +667,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Topic143"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -678,8 +678,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Topic79"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -689,8 +689,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -700,8 +700,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -711,8 +711,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Topic62"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -722,8 +722,8 @@
         "object": "?v2"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -733,8 +733,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -744,8 +744,8 @@
         "object": "?v2"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -755,8 +755,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre60"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -766,8 +766,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -777,8 +777,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/City3"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -788,8 +788,8 @@
         "object": "?v2"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -799,8 +799,8 @@
         "object": "?v3"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -810,8 +810,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -821,8 +821,8 @@
         "object": "?v0"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -832,8 +832,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Gender1"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -843,8 +843,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Website381"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -854,8 +854,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -865,8 +865,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -876,8 +876,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Offer29628"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -887,8 +887,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -898,8 +898,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -909,8 +909,8 @@
         "object": "?v0"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -920,8 +920,8 @@
         "object": "?v5"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -931,8 +931,8 @@
         "object": "?v6"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -942,8 +942,8 @@
         "object": "?v8"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -953,8 +953,8 @@
         "object": "?v8"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -964,8 +964,8 @@
         "object": "?v9"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -975,8 +975,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -986,8 +986,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -997,8 +997,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre67"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -1008,8 +1008,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -1019,8 +1019,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Topic208"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -1030,8 +1030,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/AgeGroup4"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -1041,8 +1041,8 @@
         "object": "?v2"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -1052,8 +1052,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -1063,8 +1063,8 @@
         "object": "?v2"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -1074,8 +1074,8 @@
         "object": "?v0"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -1085,8 +1085,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Product11655"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -1096,8 +1096,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -1107,8 +1107,8 @@
         "object": "?v5"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -1118,8 +1118,8 @@
         "object": "?v0"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -1129,8 +1129,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Topic35"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -1140,8 +1140,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/AgeGroup3"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -1151,8 +1151,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -1162,8 +1162,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Topic241"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -1173,8 +1173,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -1184,8 +1184,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Offer55000"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -1195,8 +1195,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Purchase26447"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -1206,8 +1206,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/City109"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -1217,8 +1217,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory12"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -1228,8 +1228,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -1239,8 +1239,8 @@
         "object": "?v2"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -1250,8 +1250,8 @@
         "object": "?v3"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -1261,8 +1261,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -1272,8 +1272,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -1283,8 +1283,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -1294,8 +1294,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/City239"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -1305,8 +1305,8 @@
         "object": "?v3"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -1316,8 +1316,8 @@
         "object": "?v3"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -1327,8 +1327,8 @@
         "object": "?v5"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -1338,8 +1338,8 @@
         "object": "?v6"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -1349,8 +1349,8 @@
         "object": "?v7"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -1360,8 +1360,8 @@
         "object": "?v8"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -1371,8 +1371,8 @@
         "object": "?v2"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -1382,8 +1382,8 @@
         "object": "?v0"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -1393,8 +1393,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Website2357"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -1404,8 +1404,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -1415,8 +1415,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -1426,8 +1426,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -1437,8 +1437,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Language28"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -1448,8 +1448,8 @@
         "object": "?v0"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -1459,8 +1459,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory4"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -1470,8 +1470,8 @@
         "object": "?v4"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -1481,8 +1481,8 @@
         "object": "?v5"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -1492,8 +1492,8 @@
         "object": "?v6"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -1503,8 +1503,8 @@
         "object": "?v7"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -1514,8 +1514,8 @@
         "object": "?v8"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -1525,8 +1525,8 @@
         "object": "?v9"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -1536,8 +1536,8 @@
         "object": "?v10"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -1547,8 +1547,8 @@
         "object": "?v11"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -1558,8 +1558,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/City37"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -1569,8 +1569,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Topic83"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -1580,8 +1580,8 @@
         "object": "?v0"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -1591,8 +1591,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -1602,8 +1602,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -1613,8 +1613,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory8"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -1624,8 +1624,8 @@
         "object": "?v0"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -1635,8 +1635,8 @@
         "object": "?v2"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -1646,8 +1646,8 @@
         "object": "?v3"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -1657,8 +1657,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Review140696"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -1668,8 +1668,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Topic31"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -1679,8 +1679,8 @@
         "object": "?v3"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -1690,8 +1690,8 @@
         "object": "?v4"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -1701,8 +1701,8 @@
         "object": "?v5"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -1712,8 +1712,8 @@
         "object": "?v0"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -1723,8 +1723,8 @@
         "object": "?v2"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -1734,8 +1734,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/City192"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -1745,8 +1745,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Product20096"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -1756,8 +1756,8 @@
         "object": "?v2"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -1767,8 +1767,8 @@
         "object": "?v3"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -1778,8 +1778,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/City227"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -1789,8 +1789,8 @@
         "object": "?v3"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -1800,8 +1800,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Review93601"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -1811,8 +1811,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory10"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -1822,8 +1822,8 @@
         "object": "?v2"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -1833,8 +1833,8 @@
         "object": "?v3"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -1844,8 +1844,8 @@
         "object": "?v4"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -1855,8 +1855,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Website2705"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3002/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
       ]
     },
     {
@@ -1866,8 +1866,8 @@
         "object": "?v6"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -1877,8 +1877,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Topic219"
       },
       "servers": [
-        "http://localhost:3001/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -1888,8 +1888,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -1899,8 +1899,8 @@
         "object": "?v3"
       },
       "servers": [
-        "http://localhost:3003/watDiv_100",
-        "http://localhost:3000/watDiv_100"
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
       ]
     },
     {
@@ -1910,8 +1910,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Country21"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3003/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
       ]
     },
     {
@@ -1921,8 +1921,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/City33"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -1932,8 +1932,8 @@
         "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Topic151"
       },
       "servers": [
-        "http://localhost:3000/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     },
     {
@@ -1943,8 +1943,8 @@
         "object": "?v1"
       },
       "servers": [
-        "http://localhost:3002/watDiv_100",
-        "http://localhost:3001/watDiv_100"
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
       ]
     }
   ]

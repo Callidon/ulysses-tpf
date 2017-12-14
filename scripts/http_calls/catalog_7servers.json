@@ -1,0 +1,1951 @@
+{
+  "patterns": [
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://ogp.me/ns#tag",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://ogp.me/ns#title",
+        "object": "?v2"
+      },
+      "servers": [
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://schema.org/language",
+        "object": "?v3"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/Website3048",
+        "predicate": "http://schema.org/language",
+        "object": "?v3"
+      },
+      "servers": [
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://schema.org/text",
+        "object": "?v5"
+      },
+      "servers": [
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://ogp.me/ns#title",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://schema.org/caption",
+        "object": "?v2"
+      },
+      "servers": [
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://schema.org/language",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Language19"
+      },
+      "servers": [
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre",
+        "object": "?v4"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/User13719",
+        "predicate": "http://xmlns.com/foaf/givenName",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4005/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://xmlns.com/foaf/age",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/AgeGroup0"
+      },
+      "servers": [
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://schema.org/email",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/gender",
+        "object": "?v2"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/subscribes",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Website4970"
+      },
+      "servers": [
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/Website3636",
+        "predicate": "http://schema.org/language",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4005/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/Retailer31",
+        "predicate": "http://schema.org/telephone",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4005/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Genre16"
+      },
+      "servers": [
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/Product23536",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre",
+        "object": "?v0"
+      },
+      "servers": [
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory7"
+      },
+      "servers": [
+        "http://curiosiphi:4005/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://schema.org/contentRating",
+        "object": "?v3"
+      },
+      "servers": [
+        "http://curiosiphi:4005/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/User75276",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/subscribes",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4005/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory4"
+      },
+      "servers": [
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4005/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://ogp.me/ns#tag",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Topic232"
+      },
+      "servers": [
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4005/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://schema.org/trailer",
+        "object": "?v2"
+      },
+      "servers": [
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v3",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/likes",
+        "object": "?v0"
+      },
+      "servers": [
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/Product3129",
+        "predicate": "http://schema.org/award",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/Product19194",
+        "predicate": "http://ogp.me/ns#title",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/Review13148",
+        "predicate": "http://purl.org/stuff/rev#rating",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://xmlns.com/foaf/age",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://xmlns.com/foaf/homepage",
+        "object": "?v2"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v3",
+        "predicate": "http://purl.org/goodrelations/price",
+        "object": "?v4"
+      },
+      "servers": [
+        "http://curiosiphi:4005/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v5",
+        "predicate": "http://ogp.me/ns#tag",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Topic196"
+      },
+      "servers": [
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4005/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v5",
+        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "object": "?v7"
+      },
+      "servers": [
+        "http://curiosiphi:4005/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/makesPurchase",
+        "object": "?v3"
+      },
+      "servers": [
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v3",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/purchaseDate",
+        "object": "?v8"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v3",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/purchaseFor",
+        "object": "?v5"
+      },
+      "servers": [
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/Product22587",
+        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://purl.org/stuff/rev#hasReview",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Review113987"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/Offer71139",
+        "predicate": "http://schema.org/eligibleRegion",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://xmlns.com/foaf/homepage",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://ogp.me/ns#tag",
+        "object": "?v2"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre114",
+        "predicate": "http://ogp.me/ns#tag",
+        "object": "?v2"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://schema.org/contentRating",
+        "object": "?v4"
+      },
+      "servers": [
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://schema.org/description",
+        "object": "?v5"
+      },
+      "servers": [
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4005/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://schema.org/text",
+        "object": "?v6"
+      },
+      "servers": [
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://schema.org/language",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Language31"
+      },
+      "servers": [
+        "http://curiosiphi:4005/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory6"
+      },
+      "servers": [
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://schema.org/language",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Language16"
+      },
+      "servers": [
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://ogp.me/ns#tag",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Topic73"
+      },
+      "servers": [
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "object": "?v2"
+      },
+      "servers": [
+        "http://curiosiphi:4005/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://schema.org/expires",
+        "object": "?v3"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://xmlns.com/foaf/homepage",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Website442"
+      },
+      "servers": [
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v2",
+        "predicate": "http://purl.org/goodrelations/includes",
+        "object": "?v0"
+      },
+      "servers": [
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://ogp.me/ns#title",
+        "object": "?v3"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4005/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v5",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/likes",
+        "object": "?v0"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/User39669",
+        "predicate": "http://xmlns.com/foaf/familyName",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4005/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/Review126762",
+        "predicate": "http://purl.org/stuff/rev#rating",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/Retailer1096",
+        "predicate": "http://purl.org/goodrelations/offers",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v1",
+        "predicate": "http://purl.org/goodrelations/validThrough",
+        "object": "?v2"
+      },
+      "servers": [
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4005/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://ogp.me/ns#tag",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Topic143"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://ogp.me/ns#tag",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Topic79"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/Purchase53540",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/purchaseDate",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4005/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/Product14948",
+        "predicate": "http://purl.org/ontology/mo/record_number",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://ogp.me/ns#tag",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Topic62"
+      },
+      "servers": [
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://schema.org/description",
+        "object": "?v2"
+      },
+      "servers": [
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://schema.org/contentRating",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://schema.org/text",
+        "object": "?v2"
+      },
+      "servers": [
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre60"
+      },
+      "servers": [
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/Product13976",
+        "predicate": "http://ogp.me/ns#title",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4005/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://purl.org/dc/terms/Location",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/City3"
+      },
+      "servers": [
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://schema.org/jobTitle",
+        "object": "?v2"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4005/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://schema.org/nationality",
+        "object": "?v3"
+      },
+      "servers": [
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://purl.org/dc/terms/Location",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4005/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v2",
+        "predicate": "http://purl.org/ontology/mo/artist",
+        "object": "?v0"
+      },
+      "servers": [
+        "http://curiosiphi:4005/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/gender",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Gender1"
+      },
+      "servers": [
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://xmlns.com/foaf/homepage",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Website381"
+      },
+      "servers": [
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4005/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/Product17983",
+        "predicate": "http://schema.org/description",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://purl.org/goodrelations/description",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://purl.org/goodrelations/offers",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Offer29628"
+      },
+      "servers": [
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/Website365",
+        "predicate": "http://schema.org/language",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4005/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://purl.org/goodrelations/includes",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/Retailer1074",
+        "predicate": "http://purl.org/goodrelations/offers",
+        "object": "?v0"
+      },
+      "servers": [
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v3",
+        "predicate": "http://purl.org/goodrelations/price",
+        "object": "?v5"
+      },
+      "servers": [
+        "http://curiosiphi:4005/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v1",
+        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "object": "?v6"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4005/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v7",
+        "predicate": "http://purl.org/stuff/rev#reviewer",
+        "object": "?v8"
+      },
+      "servers": [
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v1",
+        "predicate": "http://schema.org/editor",
+        "object": "?v8"
+      },
+      "servers": [
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v3",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/purchaseDate",
+        "object": "?v9"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v3",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/purchaseFor",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/Review97507",
+        "predicate": "http://purl.org/stuff/rev#reviewer",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre67"
+      },
+      "servers": [
+        "http://curiosiphi:4005/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/Offer48437",
+        "predicate": "http://schema.org/eligibleRegion",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v5",
+        "predicate": "http://ogp.me/ns#tag",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Topic208"
+      },
+      "servers": [
+        "http://curiosiphi:4005/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://xmlns.com/foaf/age",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/AgeGroup4"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/subscribes",
+        "object": "?v2"
+      },
+      "servers": [
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://purl.org/goodrelations/price",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://purl.org/goodrelations/price",
+        "object": "?v2"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v3",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/makesPurchase",
+        "object": "?v0"
+      },
+      "servers": [
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/purchaseFor",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Product11655"
+      },
+      "servers": [
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre42",
+        "predicate": "http://ogp.me/ns#tag",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://schema.org/keywords",
+        "object": "?v5"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v6",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/purchaseFor",
+        "object": "?v0"
+      },
+      "servers": [
+        "http://curiosiphi:4005/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://ogp.me/ns#tag",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Topic35"
+      },
+      "servers": [
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://xmlns.com/foaf/age",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/AgeGroup3"
+      },
+      "servers": [
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/Review81618",
+        "predicate": "http://purl.org/stuff/rev#rating",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4005/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v5",
+        "predicate": "http://ogp.me/ns#tag",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Topic241"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4005/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre96",
+        "predicate": "http://ogp.me/ns#tag",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4005/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://purl.org/goodrelations/offers",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Offer55000"
+      },
+      "servers": [
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/makesPurchase",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Purchase26447"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://purl.org/dc/terms/Location",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/City109"
+      },
+      "servers": [
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory12"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/User12412",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/makesPurchase",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4005/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v1",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/purchaseDate",
+        "object": "?v2"
+      },
+      "servers": [
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4005/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v1",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/purchaseDate",
+        "object": "?v3"
+      },
+      "servers": [
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/City168",
+        "predicate": "http://www.geonames.org/ontology#parentCountry",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v2",
+        "predicate": "http://schema.org/nationality",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/Retailer1007",
+        "predicate": "http://purl.org/goodrelations/offers",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4005/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://purl.org/dc/terms/Location",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/City239"
+      },
+      "servers": [
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v2",
+        "predicate": "http://ogp.me/ns#tag",
+        "object": "?v3"
+      },
+      "servers": [
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v4",
+        "predicate": "http://ogp.me/ns#tag",
+        "object": "?v3"
+      },
+      "servers": [
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v2",
+        "predicate": "http://schema.org/description",
+        "object": "?v5"
+      },
+      "servers": [
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://schema.org/email",
+        "object": "?v6"
+      },
+      "servers": [
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v2",
+        "predicate": "http://schema.org/keywords",
+        "object": "?v7"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/gender",
+        "object": "?v8"
+      },
+      "servers": [
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/likes",
+        "object": "?v2"
+      },
+      "servers": [
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/Product24077",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre",
+        "object": "?v0"
+      },
+      "servers": [
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://xmlns.com/foaf/homepage",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Website2357"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/Product14846",
+        "predicate": "http://ogp.me/ns#title",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/User30617",
+        "predicate": "http://purl.org/dc/terms/Location",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/Website2283",
+        "predicate": "http://schema.org/url",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://schema.org/language",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Language28"
+      },
+      "servers": [
+        "http://curiosiphi:4005/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v2",
+        "predicate": "http://purl.org/goodrelations/offers",
+        "object": "?v0"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v1",
+        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory4"
+      },
+      "servers": [
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v2",
+        "predicate": "http://schema.org/aggregateRating",
+        "object": "?v4"
+      },
+      "servers": [
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v2",
+        "predicate": "http://schema.org/aggregateRating",
+        "object": "?v5"
+      },
+      "servers": [
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v2",
+        "predicate": "http://schema.org/contactPoint",
+        "object": "?v6"
+      },
+      "servers": [
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v2",
+        "predicate": "http://schema.org/email",
+        "object": "?v7"
+      },
+      "servers": [
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v2",
+        "predicate": "http://schema.org/email",
+        "object": "?v8"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v2",
+        "predicate": "http://schema.org/faxNumber",
+        "object": "?v9"
+      },
+      "servers": [
+        "http://curiosiphi:4005/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v2",
+        "predicate": "http://schema.org/legalName",
+        "object": "?v10"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v2",
+        "predicate": "http://schema.org/paymentAccepted",
+        "object": "?v11"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://purl.org/dc/terms/Location",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/City37"
+      },
+      "servers": [
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://ogp.me/ns#tag",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Topic83"
+      },
+      "servers": [
+        "http://curiosiphi:4005/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v2",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/likes",
+        "object": "?v0"
+      },
+      "servers": [
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/City48",
+        "predicate": "http://www.geonames.org/ontology#parentCountry",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/User71947",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/subscribes",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4005/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory8"
+      },
+      "servers": [
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/Product5830",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre",
+        "object": "?v0"
+      },
+      "servers": [
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre98",
+        "predicate": "http://ogp.me/ns#tag",
+        "object": "?v2"
+      },
+      "servers": [
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://ogp.me/ns#tag",
+        "object": "?v3"
+      },
+      "servers": [
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://purl.org/stuff/rev#hasReview",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Review140696"
+      },
+      "servers": [
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://ogp.me/ns#tag",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Topic31"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v2",
+        "predicate": "http://schema.org/contentSize",
+        "object": "?v3"
+      },
+      "servers": [
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v2",
+        "predicate": "http://schema.org/text",
+        "object": "?v4"
+      },
+      "servers": [
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4005/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v2",
+        "predicate": "http://schema.org/text",
+        "object": "?v5"
+      },
+      "servers": [
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v2",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre",
+        "object": "?v0"
+      },
+      "servers": [
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v6",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/likes",
+        "object": "?v2"
+      },
+      "servers": [
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://purl.org/dc/terms/Location",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/City192"
+      },
+      "servers": [
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://purl.org/goodrelations/includes",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Product20096"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4005/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://purl.org/goodrelations/serialNumber",
+        "object": "?v2"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://purl.org/goodrelations/validThrough",
+        "object": "?v3"
+      },
+      "servers": [
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://purl.org/dc/terms/Location",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/City227"
+      },
+      "servers": [
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4005/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/Website689",
+        "predicate": "http://schema.org/language",
+        "object": "?v3"
+      },
+      "servers": [
+        "http://curiosiphi:4005/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://purl.org/stuff/rev#hasReview",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Review93601"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/ProductCategory10"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://schema.org/telephone",
+        "object": "?v2"
+      },
+      "servers": [
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4005/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://schema.org/telephone",
+        "object": "?v3"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/gender",
+        "object": "?v4"
+      },
+      "servers": [
+        "http://curiosiphi:4002/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/subscribes",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Website2705"
+      },
+      "servers": [
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://db.uwaterloo.ca/~galuc/wsdbm/userId",
+        "object": "?v6"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://ogp.me/ns#tag",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Topic219"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4002/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/Product13623",
+        "predicate": "http://schema.org/publisher",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4004/watDiv_100",
+        "http://curiosiphi:4000/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v1",
+        "predicate": "http://schema.org/contentSize",
+        "object": "?v3"
+      },
+      "servers": [
+        "http://curiosiphi:4000/watDiv_100",
+        "http://curiosiphi:4005/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://schema.org/eligibleRegion",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Country21"
+      },
+      "servers": [
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4004/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://purl.org/dc/terms/Location",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/City33"
+      },
+      "servers": [
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4005/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "?v0",
+        "predicate": "http://ogp.me/ns#tag",
+        "object": "http://db.uwaterloo.ca/~galuc/wsdbm/Topic151"
+      },
+      "servers": [
+        "http://curiosiphi:4003/watDiv_100",
+        "http://curiosiphi:4001/watDiv_100"
+      ]
+    },
+    {
+      "pattern": {
+        "subject": "http://db.uwaterloo.ca/~galuc/wsdbm/Product14713",
+        "predicate": "http://schema.org/caption",
+        "object": "?v1"
+      },
+      "servers": [
+        "http://curiosiphi:4001/watDiv_100",
+        "http://curiosiphi:4003/watDiv_100"
+      ]
+    }
+  ]
+}

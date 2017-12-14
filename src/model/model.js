@@ -154,9 +154,9 @@ class Model extends EventEmitter {
    * @param {number} realTime - Real execution of the last request sent to this server (!= of time in case of failover)
    * @return {void}
    */
-  setResponseTime (endpoint, time, realTime) {
+  setResponseTime (endpoint, time, realTime, url) {
     this._times[endpoint] = time
-    this.emit('updated_time', endpoint, time, realTime)
+    this.emit('updated_time', endpoint, time, realTime, url)
   }
 
   /**
@@ -164,10 +164,14 @@ class Model extends EventEmitter {
    * @return {void}
    */
   computeModel () {
-    this._weights = mapValues(this._times, (t, e) => this._triplesPerPage[e] / t)
+    this._weights = mapValues(this._times, (time, server) => {
+      // pre-emptive check: an access times could be equal to 0 with local servers
+      // so we increment the minimal access time by 1
+      return this._triplesPerPage[server] / (time + 1)
+    })
     this._minWeight = Math.min(...values(this._weights))
-    this._coefficients = mapValues(this._weights, w => Math.floor(w / this._minWeight))
-    this._sumCoefs = values(this._coefficients).reduce((acc, x) => acc + x, 0)
+    this._coefficients = mapValues(this._weights, weight => Math.floor(weight / this._minWeight))
+    this._sumCoefs = values(this._coefficients).reduce((acc, coef) => acc + coef, 0)
   }
 
   /**
@@ -188,7 +192,7 @@ class Model extends EventEmitter {
    */
   getRNGVector () {
     if (this._servers.length === 1) return [ this._servers[0] ]
-    const vector = values(this._coefficients).map(x => x / this._sumCoefs)
+    const vector = values(this._coefficients).map(coef => coef / this._sumCoefs)
     return flatten(vector.map((p, ind) => times(p * 100, constant(this._servers[ind]))))
   }
 }
