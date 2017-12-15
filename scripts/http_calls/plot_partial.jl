@@ -7,7 +7,7 @@ using CalliPlots
 
 custom_theme = Theme(
     key_position = :top,
-    bar_spacing = 5px
+    bar_spacing = 7px
 )
 
 Gadfly.push_theme(custom_theme)
@@ -100,13 +100,19 @@ calls_q54[:query] = "Q54"
 calls_q52[:query] = "Q52"
 
 all = [calls_q90;calls_q48;calls_q17;calls_q54;calls_q52]
+group1 = [calls_q90;calls_q48;calls_q52]
+group2 = [calls_q17;calls_q54]
 
 # Build plots
 
-plot_homo = plot(all, xgroup="query", y="x1", x="strpattern", color="target",
-Geom.subplot_grid(Geom.bar(position=:stack), free_x_axis=true),
+plot1 = plot(group1, xgroup="query", y="x1", x="strpattern", color="target",
+Geom.subplot_grid(Geom.bar(position=:stack), free_x_axis=true, Guide.xticks(orientation=:vertical)),
 Guide.xlabel("Triple pattern by query"), Guide.ylabel("Number of HTTP requests"),
 Guide.colorkey("TPF servers"), colors())
 
+plot2 = plot(group2, xgroup="query", y="x1", x="strpattern", color="target",
+Geom.subplot_grid(Geom.bar(position=:stack), free_x_axis=true, Guide.xticks(orientation=:vertical)),
+Guide.xlabel("Triple pattern by query"), Guide.ylabel("Number of HTTP requests"),
+Guide.colorkey("TPF servers"), colors())
 
-draw(PDF("scripts/curio/http_calls_partial.pdf", 10inch, 4inch), plot_homo)
+draw(PDF("scripts/curio/http_calls_partial.pdf", 10inch, 4inch), hstack(plot1, plot2))
