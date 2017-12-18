@@ -7,7 +7,13 @@ using CalliPlots
 
 custom_theme = Theme(
     key_position = :top,
-    bar_spacing = 7px
+    bar_spacing = 7px,
+    major_label_font_size=18px,
+    minor_label_font_size=12px,
+    major_label_font="Computer Modern",
+    major_label_color=colorant"#000000",
+    minor_label_color=colorant"#000000",
+    key_label_color=colorant"#000000"
 )
 
 Gadfly.push_theme(custom_theme)
@@ -107,12 +113,12 @@ group2 = [calls_q17;calls_q54]
 
 plot1 = plot(group1, xgroup="query", y="x1", x="strpattern", color="target",
 Geom.subplot_grid(Geom.bar(position=:stack), free_x_axis=true, Guide.xticks(orientation=:vertical)),
-Guide.xlabel("Triple pattern by query"), Guide.ylabel("Number of HTTP requests"),
+Guide.xlabel("Triple pattern by query"), Guide.ylabel("# HTTP requests"),
 Guide.colorkey("TPF servers"), colors())
 
 plot2 = plot(group2, xgroup="query", y="x1", x="strpattern", color="target",
 Geom.subplot_grid(Geom.bar(position=:stack), free_x_axis=true, Guide.xticks(orientation=:vertical)),
-Guide.xlabel("Triple pattern by query"), Guide.ylabel("Number of HTTP requests"),
+Guide.xlabel("Triple pattern by query"), Guide.ylabel("# HTTP requests"),
 Guide.colorkey("TPF servers"), colors())
 
 draw(PDF("scripts/curio/http_calls_partial.pdf", 10inch, 4inch), hstack(plot1, plot2))

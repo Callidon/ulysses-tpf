@@ -5,7 +5,12 @@ using RDatasets
 using CalliPlots
 
 custom_theme = Theme(
-    key_position = :top
+    key_position = :top,
+    major_label_font_size=15px,
+    major_label_font="Computer Modern",
+    major_label_color=colorant"#000000",
+    minor_label_color=colorant"#000000",
+    key_label_color=colorant"#000000"
 )
 
 Gadfly.push_theme(custom_theme)
@@ -55,7 +60,7 @@ all = [time_ref;time_2s;time_3s;time_20s]
 # p = plot([time_ref;time_mixed;time_ulysses], y=:time, x=:clients, color=:approach, Geom.line, Guide.xlabel("Number of clients"), Guide.ylabel("Execution time (s)"), Scale.x_discrete)
 # Smooth version
 p = plot(all, y=:time, x=:clients, color=:approach, Geom.smooth(method=:loess, smoothing=0.75),
-Guide.xlabel("Number of concurrent clients executing the query"), Guide.ylabel("Execution time (s)"), Guide.xticks(ticks=[1, 10, 20, 50, 100]),
+Guide.xlabel("Number of concurrent clients executing the query"), Guide.ylabel("avg. execution time (s)"), Guide.xticks(ticks=[1, 10, 20, 50, 100]),
 Guide.colorkey("Number of server(s)"), colors())
 
 draw(PDF("scripts/curio/execution_time_with_load.pdf", 5inch, 3inch), p)

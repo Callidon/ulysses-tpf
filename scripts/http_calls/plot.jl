@@ -6,7 +6,13 @@ using CalliPlots
 
 custom_theme = Theme(
     key_position = :none,
-    bar_spacing = 5px
+    bar_spacing = 5px,
+    major_label_font_size=17px,
+    minor_label_font_size=12px,
+    major_label_font="Computer Modern",
+    major_label_color=colorant"#000000",
+    minor_label_color=colorant"#000000",
+    key_label_color=colorant"#000000"
 )
 
 Gadfly.push_theme(custom_theme)
@@ -101,12 +107,12 @@ all_hetero = [calls_ref;calls_2_hetero;calls_3_hetero;calls_4_hetero]
 
 plot_homo = plot(all_homo, xgroup=:approach, y=:x1, x=:target, color=:approach,
 Geom.subplot_grid(Geom.bar, Scale.x_discrete, free_x_axis=true),
-Guide.xlabel("Number of homogeneous TPF servers"), Guide.ylabel("Number of HTTP requests"),
+Guide.xlabel("Number of homogeneous TPF servers"), Guide.ylabel("# HTTP requests"),
 Guide.colorkey(""), colors())
 
 plot_hetero = plot(all_hetero, xgroup=:approach, y=:x1, x=:target, color=:approach,
 Geom.subplot_grid(Geom.bar, Scale.x_discrete, free_x_axis=true),
-Guide.xlabel("Number of heterogeneous TPF servers"), Guide.ylabel("Number of HTTP requests"),
+Guide.xlabel("Number of heterogeneous TPF servers"), Guide.ylabel("# HTTP requests"),
 Guide.colorkey(""), colors())
 
 draw(PDF("scripts/curio/http_calls_homo.pdf", 5inch, 3inch), plot_homo)
