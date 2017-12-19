@@ -6,7 +6,12 @@ using CalliPlots
 
 custom_theme = Theme(
     key_position = :none,
-    bar_spacing = 5px
+    bar_spacing = 5px,
+    major_label_font_size=15px,
+    major_label_font="Computer Modern",
+    major_label_color=colorant"#000000",
+    minor_label_color=colorant"#000000",
+    key_label_color=colorant"#000000"
 )
 
 Gadfly.push_theme(custom_theme)
@@ -43,7 +48,7 @@ function process(filename)
     df = by(df, [:target, :timestamp]) do x
         timeType = "0s to 19s"
         if x[:timestamp][1] >= 20 #&& x[:timestamp][1] <= 30
-            timeType = "20s to end of query"
+            timeType = "20s to end"
         # elseif x[:timestamp][1] >= 31
         #     timeType = "31s+"
         end
@@ -65,5 +70,5 @@ load_3servers = meanDF(:x1, map(process, files)...)
 
 p = plot(load_3servers, xgroup=:x2, x=:target, y=:x1, color=:target,
 Geom.subplot_grid(Geom.bar, Scale.x_discrete, free_x_axis=true),
-Guide.xlabel("Elapsed time (seconds)"), Guide.ylabel("Number of HTTP requests"), colors())
-draw(PDF("scripts/adaptivity/load_adaptivity.pdf", 5inch, 3inch), p)
+Guide.xlabel("Elapsed time (seconds)"), Guide.ylabel("# HTTP requests"), colors())
+draw(PDF("scripts/adaptivity/load_adaptivity.pdf", 4inch, 3inch), p)
