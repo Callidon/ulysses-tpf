@@ -69,6 +69,7 @@ function ulyssesIterator (query, servers, config = {}) {
     config.request = ulyssesRequester(model)
     config.fragmentsClient = new UlyssesFragmentsClient(model, servers, selection, config)
     iterator.source = new ldf.SparqlIterator(query, config)
+    iterator.model = model
   }).catch(error => {
     iterator.emit('error', error)
     iterator.close()
