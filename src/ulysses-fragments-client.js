@@ -25,6 +25,7 @@ SOFTWARE.
 'use strict'
 
 const { isNull, isUndefined, sample } = require('lodash')
+const { SingletonIterator } = require('asynciterator')
 const LRU = require('lru-cache')
 const FragmentsClient = require('ldf-client/lib/triple-pattern-fragments/FragmentsClient')
 
@@ -72,7 +73,11 @@ class UlyssesFragmentsClient {
     let model = this._model
     let servers = this._selection.get(pattern)
     if (!isNull(servers) && !(isUndefined(servers))) {
-      if (servers.length === 1) return this._clients.get(servers[0]).getFragmentByPattern(pattern)
+      if (servers.length === 0) {
+        return this._clients.get(model.servers[0]).getFragmentByPattern(pattern)
+      } else if (servers.length === 1) {
+        return this._clients.get(servers[0]).getFragmentByPattern(pattern)
+      }
       model = this._model.subset(servers)
     }
     // select random target TPF server according to the cost-model

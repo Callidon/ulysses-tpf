@@ -33,6 +33,7 @@ const { compact, every, flatten, map } = require('lodash')
  * @return {string} The stringified triple pattern
  */
 function stringifyPattern (pattern) {
+  if (pattern == null) return 'unknown'
   return `s=${pattern.subject || '_'}&p=${pattern.predicate || '_'}&o=${pattern.object || '_'}`
 }
 
