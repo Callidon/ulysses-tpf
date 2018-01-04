@@ -60,8 +60,8 @@ all = [time_ref;time_2s;time_3s;time_20s]
 # p = plot([time_ref;time_mixed;time_ulysses], y=:time, x=:clients, color=:approach, Geom.line, Guide.xlabel("Number of clients"), Guide.ylabel("Execution time (s)"), Scale.x_discrete)
 # Smooth version
 p = plot(all, y=:time, x=:clients, color=:approach, Geom.smooth(method=:loess, smoothing=0.75),
-Guide.xlabel("Number of concurrent clients executing the query"), Guide.ylabel("avg. execution time (s)"), Guide.xticks(ticks=[1, 10, 20, 50, 100]),
-Guide.colorkey("Number of server(s)"), colors())
+Guide.xlabel("Number of concurrent clients executing the query"), Guide.ylabel("avg. execution time (s)", orientation=:vertical),
+Guide.xticks(ticks=[1, 10, 20, 50, 100]), Guide.colorkey("Number of server(s)"), colors())
 
-draw(PDF("scripts/curio/execution_time_with_load.pdf", 5inch, 3inch), p)
+draw(PDF("scripts/curio/execution_time_with_load.pdf", 7inch, 3inch), p)
 # draw(PNG("scripts/curio/execution_time_with_load.png", 15inch, 7inch), p)
