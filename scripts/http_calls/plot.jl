@@ -117,3 +117,5 @@ Guide.colorkey(""), colors())
 
 draw(PDF("scripts/curio/http_calls_homo.pdf", 5inch, 3inch), plot_homo)
 draw(PDF("scripts/curio/http_calls_hetero.pdf", 5inch, 3inch), plot_hetero)
+draw(PNG("scripts/curio/http_calls_homo.png", 5inch, 3inch), plot_homo)
+draw(PNG("scripts/curio/http_calls_hetero.png", 5inch, 3inch), plot_hetero)

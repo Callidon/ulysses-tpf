@@ -64,4 +64,4 @@ Guide.xlabel("Number of concurrent clients executing the query"), Guide.ylabel("
 Guide.xticks(ticks=[1, 10, 20, 50, 100]), Guide.colorkey("Number of server(s)"), colors())
 
 draw(PDF("scripts/curio/execution_time_with_load.pdf", 7inch, 3inch), p)
-# draw(PNG("scripts/curio/execution_time_with_load.png", 15inch, 7inch), p)
+draw(PNG("scripts/curio/execution_time_with_load.png", 7inch, 3inch), p)

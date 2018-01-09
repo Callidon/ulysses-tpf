@@ -122,3 +122,4 @@ Guide.xlabel("Triple pattern by query"), Guide.ylabel("# HTTP requests"),
 Guide.colorkey("TPF servers"), colors())
 
 draw(PDF("scripts/curio/http_calls_partial.pdf", 10inch, 4inch), hstack(plot1, plot2))
+draw(PNG("scripts/curio/http_calls_partial.png", 10inch, 4inch), hstack(plot1, plot2))

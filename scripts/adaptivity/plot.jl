@@ -72,3 +72,4 @@ p = plot(load_3servers, xgroup=:x2, x=:target, y=:x1, color=:target,
 Geom.subplot_grid(Geom.bar, Scale.x_discrete, free_x_axis=true),
 Guide.xlabel("Elapsed time (seconds)"), Guide.ylabel("# HTTP requests"), colors())
 draw(PDF("scripts/adaptivity/load_adaptivity.pdf", 4inch, 3inch), p)
+draw(PNG("scripts/adaptivity/load_adaptivity.png", 7inch, 3inch), p)

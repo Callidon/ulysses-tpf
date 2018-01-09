@@ -61,3 +61,4 @@ p = plot(load_2servers, x=:timestamp, y=:x1, Geom.line, Geom.point, annot_1, ann
 Guide.xticks(ticks=[0,5,10,15,20,25,30,35,40,45,50]), Guide.xlabel("Elapsed time (seconds)"),
 Guide.ylabel("avg. HTTP response time (ms)", orientation=:vertical))
 draw(PDF("scripts/fault/fault_tolerance.pdf", 5inch, 3.5inch), p)
+draw(PNG("scripts/fault/fault_tolerance.png", 7inch, 3inch), p)
