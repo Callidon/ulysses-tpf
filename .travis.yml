@@ -1,0 +1,15 @@
+language: node_js
+notifications:
+  email: false
+install: npm install
+script:
+- npm run lint
+- npm test
+deploy:
+  provider: npm
+  skip_cleanup: true
+  email: tminier01@gmail.com
+  api_key: $NPM_KEY
+  on:
+    tags: true
+    repo: Callidon/ulysses-tpf

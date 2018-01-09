@@ -25,7 +25,6 @@ SOFTWARE.
 'use strict'
 
 const { isNull, isUndefined, sample } = require('lodash')
-const { SingletonIterator } = require('asynciterator')
 const LRU = require('lru-cache')
 const FragmentsClient = require('ldf-client/lib/triple-pattern-fragments/FragmentsClient')
 

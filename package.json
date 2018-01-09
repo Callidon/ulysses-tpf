@@ -7,6 +7,7 @@
     "ulysses-tpf": "./bin/ulysses-tpf.js"
   },
   "scripts": {
+    "lint": "standard",
     "build": "browserify -r ./src/ulysses-iterator.js:ulysses -t [ babelify --presets [ env ] --plugins [ transform-runtime ] ] -o ulysses.bundle.js",
     "test": "jest --notify"
   },
@@ -27,12 +28,12 @@
   "homepage": "https://github.com/Callidon/ulysses-tpf#readme",
   "dependencies": {
     "commander": "^2.11.0",
-    "http-proxy": "^1.16.2",
     "ldf-client": "^2.0.5",
     "lodash": "^4.17.4",
     "request": "^2.83.0"
   },
   "devDependencies": {
+    "http-proxy": "^1.16.2",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
     "babelify": "^8.0.0",

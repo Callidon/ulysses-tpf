@@ -39,8 +39,8 @@ program
   .option('-q, --query <query>', 'evaluates the given SPARQL query')
   .option('-f, --file <file>', 'evaluates the SPARQL query in the given file')
   .option('-t, --timeout <timeout>', 'set SPARQL query timeout in milliseconds (default: 30mn)', 30 * 60 * 1000)
-  .option('-m, --measure <output>', 'measure the query execution time (in seconds) & append it to a file', './execution_times.csv')
-  .option('-s, --silent', 'do not perform any measurement on execution time ', false)
+  .option('-m, --measure <output>', 'measure the query execution time (in seconds) & append it to a file', null)
+  .option('-s, --silent', 'do not perform any measurement on execution time ', true)
   .option('-r, --record', 'enable record mode, which output enhanced data in CSV for data analysis')
   .option('-c, --catalog <json-file>', 'pass a custom catalog contained in a JSON file')
   .parse(process.argv)
@@ -56,6 +56,7 @@ const configFile = path.join(__dirname, '../node_modules/ldf-client/config-defau
 const config = JSON.parse(fs.readFileSync(configFile, { encoding: 'utf8' }))
 config.recordMode = program.record
 config.noCache = true
+// read catalog from file if specified
 if (!isUndefined(program.catalog)) {
   const catalog = JSON.parse(fs.readFileSync(program.catalog, { encoding: 'utf8' }))
   const selection = new Selection()
@@ -88,7 +89,9 @@ iterator.on('end', () => {
   if (!program.silent) {
     const endTime = Date.now()
     const time = endTime - startTime
-    fs.appendFileSync(program.measure, time / 1000)
+    if (program.measure) {
+      fs.appendFileSync(program.measure, time / 1000)
+    }
   }
 })
 
