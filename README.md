@@ -92,33 +92,35 @@ Average number of HTTP requests received by servers after evaluation of WatDiv q
 
 **All servers have same capabilities (homogeneous servers)**
 
-![plot_total_homo]()
+![plot_total_homo](https://raw.githubusercontent.com/Callidon/ulysses-tpf/master/scripts/curio/http_calls_homo.png)
 
 **S1 is three times slower than the others (heterogeneous servers)**
+
+![plot_total_hetero](https://raw.githubusercontent.com/Callidon/ulysses-tpf/master/scripts/curio/http_calls_hetero.png)
 
 ### Load distribution with partial replication
 
 Average number of HTTP requests received by servers after evaluation of The five queries that generate the most HTTP requests, with partial replication and homogeneous servers.
 
-![plot_partial_homo]()
+![plot_partial_homo](https://raw.githubusercontent.com/Callidon/ulysses-tpf/master/scripts/curio/http_calls_partial.png)
 
 ### Execution time under load
 
 Average query execution time with an increasing
 number of concurrent clients and available servers, using *Ulysses* client
 
-![plot_exec_time]()
+![plot_exec_time](https://raw.githubusercontent.com/Callidon/ulysses-tpf/master/scripts/curio/execution_time_with_load.png)
 
 ### Fault tolerance
 
 Average HTTP response time when evaluating query 72 using
 three homogeneous servers (S1, S2, S3) in presence of failures: S1 fails at 5s and S3 fails at 20s
 
-![plot_failures]()
+![plot_failures](https://raw.githubusercontent.com/Callidon/ulysses-tpf/master/scripts/fault/fault_tolerance.png)
 
 ### Load adaptivity
 
 Average number of HTTP requests received by servers S1, S2, S3
 during evaluation of query 72. Servers starts homogeneous, then S1 access latency is tripled at 20s
 
-![plot_load]()
+![plot_load](https://raw.githubusercontent.com/Callidon/ulysses-tpf/master/scripts/adaptivity/load_adaptivity.png)
