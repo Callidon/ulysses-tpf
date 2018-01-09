@@ -58,7 +58,12 @@ Usage: ulysses-tpf <servers...> [options]
 We use one instance of the [Waterloo SPARQL Diversity Test Suite](http://dsg.uwaterloo.ca/watdiv/) (WatDiv) synthetic
 dataset with 10^7 triples, encoded in the [HDT format](http://www.rdfhdt.org).
 
-An **online version of the generated dataset** is available at [http://34.212.44.110/watDiv_100](http://34.212.44.110/watDiv_100).
+**Online versions of the generated dataset** are available at:
+
+* [http://34.212.44.110/watDiv_100](http://34.212.44.110/watDiv_100)
+* [http://34.216.147.78/watDiv_100](http://34.216.147.78/watDiv_100)
+* [http://35.167.12.122/watDiv_100](http://35.167.12.122/watDiv_100)
+* [http://35.160.176.165/watDiv_100](http://35.160.176.165/watDiv_100)
 
 We generate 50,000 DISTINCT queries from 500 templates (STAR, PATH, and SNOWFLAKE shaped queries). Next, we eliminate all
 duplicated queries, and then pick 100 random queries to be
