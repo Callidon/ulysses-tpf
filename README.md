@@ -78,7 +78,7 @@ regular TPF client are excluded from all configurations.
 
 Number of servers | p-value | Completeness
 ------------ | ------------- | -------------
-1 server | 2.83019e-17$ | 100%
+1 server | 2.83019e-17 | 100%
 2 servers | 9.0472e-12 | 100%
 3 servers | 5.05541e-12 | 100%
 
@@ -86,9 +86,8 @@ We executed our 100 random queries using *Ulysses* using one, two and three homo
 As a baseline, we also executed our queries with the reference TPF client, with one TPF server.
 In all configurations, *Ulysses* is able to produce the same answers as the baseline for all queries.
 
-Next, to confirm that *Ulysses* does not deteriorate query execution time, a Wilcoxon signed rank test
-for paired non-uniform data
-was run for the query execution time results obtained by *Ulysses*,
+To confirm that *Ulysses* does not deteriorate query execution time, a Wilcoxon signed rank test
+for paired non-uniform data was run for the query execution time results obtained by *Ulysses*,
 using up to three servers, with the following hypothesis:
   * H0: *Ulysses* does not change SPARQL query execution time compared to the reference TPF client.
   * H1: *Ulysses* does not increase SPARQL query execution time compared.
