@@ -57,7 +57,7 @@ Usage: ulysses-tpf <servers...> [options]
 
 We use one instance of the [Waterloo SPARQL Diversity Test Suite](http://dsg.uwaterloo.ca/watdiv/) (WatDiv) synthetic
 dataset with 10^7 triples, encoded in the [HDT format](http://www.rdfhdt.org).
-An online version of the generated dataset is [available at this address](http://34.212.44.110/watDiv_100)
+An online version of the generated dataset is [available at this address](http://34.212.44.110/watDiv_100).
 
 We generate 50,000 DISTINCT queries from 500 templates (STAR, PATH, and SNOWFLAKE shaped queries). Next, we eliminate all
 duplicated queries, and then pick 100 random queries to be
@@ -83,8 +83,8 @@ Next, to confirm that *Ulysses* does not deteriorate query execution time, a Wil
 for paired non-uniform data
 was run for the query execution time results obtained by *Ulysses*,
 using up to three servers, with the following hypothesis:
-  * H0: *Ulysses* does not change SPARQL query execution time compared to the reference TPF client;
-  * H1: *Ulysses* does not increase SPARQL query execution time compared
+  * H0: *Ulysses* does not change SPARQL query execution time compared to the reference TPF client.
+  * H1: *Ulysses* does not increase SPARQL query execution time compared.
 
 ### Load distribution with total replication
 
@@ -107,20 +107,20 @@ Average number of HTTP requests received by servers after evaluation of The five
 ### Execution time under load
 
 Average query execution time with an increasing
-number of concurrent clients and available servers, using *Ulysses* client
+number of concurrent clients and available servers, using *Ulysses* client.
 
 ![plot_exec_time](https://raw.githubusercontent.com/Callidon/ulysses-tpf/master/scripts/curio/execution_time_with_load.png)
 
 ### Fault tolerance
 
 Average HTTP response time when evaluating query 72 using
-three homogeneous servers (S1, S2, S3) in presence of failures: S1 fails at 5s and S3 fails at 20s
+three homogeneous servers (S1, S2, S3) in presence of failures: S1 fails at 5s and S3 fails at 20s.
 
 ![plot_failures](https://raw.githubusercontent.com/Callidon/ulysses-tpf/master/scripts/fault/fault_tolerance.png)
 
 ### Load adaptivity
 
 Average number of HTTP requests received by servers S1, S2, S3
-during evaluation of query 72. Servers starts homogeneous, then S1 access latency is tripled at 20s
+during evaluation of query 72. Servers starts homogeneous, then S1 access latency is tripled at 20s.
 
 ![plot_load](https://raw.githubusercontent.com/Callidon/ulysses-tpf/master/scripts/adaptivity/load_adaptivity.png)
