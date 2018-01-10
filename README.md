@@ -22,8 +22,8 @@ Experimentations demonstrate that *Ulysses* reduces the load of  TPF servers, to
 
 ## Online demonstration
 
-An online version of the Ulysses query engine is avaibale at [http://ulysses-demo.herokuapp.com/](http://ulysses-demo.herokuapp.com/).
-Please use the **http** version of this website, and not the https version, due to Heroku hosting plociy.
+An online version of the Ulysses query engine is available at [http://ulysses-demo.herokuapp.com/](http://ulysses-demo.herokuapp.com/).
+Please use the **http** version of this website, and not the https version, due to Heroku hosting policy.
 
 ## Installation
 
@@ -47,7 +47,7 @@ Usage: ulysses-tpf <servers...> [options]
     -q, --query <query>        evaluates the given SPARQL query
     -f, --file <file>          evaluates the SPARQL query in the given file
     -t, --timeout <timeout>    set SPARQL query timeout in milliseconds (default: 30mn)
-    -c, --catalog <json-file>  pass a custom catalog contained in a JSON file
+    -c, --catalog <json-file>  a custom catalog contained in a JSON file
     -h, --help                 output usage information
 ```
 
@@ -127,6 +127,6 @@ three homogeneous servers (S1, S2, S3) in presence of failures: S1 fails at 5s a
 ### Load adaptivity
 
 Average number of HTTP requests received by servers S1, S2, S3
-during evaluation of query 72. Servers starts homogeneous, then S1 access latency is tripled at 20s.
+during evaluation of query 72. Servers start homogeneous, then S1 access latency is tripled at 20s.
 
 ![plot_load](https://raw.githubusercontent.com/Callidon/ulysses-tpf/master/scripts/adaptivity/load_adaptivity.png)
