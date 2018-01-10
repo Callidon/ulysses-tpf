@@ -1,6 +1,6 @@
 {
   "name": "ulysses-tpf",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Ulysses smart client for replicated Triple Pattern Fragments",
   "main": "./src/ulysses-iterator.js",
   "bin": {

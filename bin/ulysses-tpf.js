@@ -42,7 +42,7 @@ program
   .option('-m, --measure <output>', 'measure the query execution time (in seconds) & append it to a file', null)
   .option('-s, --silent', 'do not perform any measurement on execution time ', true)
   .option('-r, --record', 'enable record mode, which output enhanced data in CSV for data analysis')
-  .option('-c, --catalog <json-file>', 'pass a custom catalog contained in a JSON file')
+  .option('-c, --catalog <json-file>', 'load a custom catalog contained in a JSON file')
   .parse(process.argv)
 
 // get servers
