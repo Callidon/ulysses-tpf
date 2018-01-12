@@ -7,18 +7,21 @@ using CalliPlots
 custom_theme = Theme(
     key_position = :none,
     bar_spacing = 5px,
+    key_title_font_size=18px,
+    key_label_font_size=15px,
     major_label_font_size=17px,
     minor_label_font_size=12px,
     major_label_font="Computer Modern",
     major_label_color=colorant"#000000",
     minor_label_color=colorant"#000000",
-    key_label_color=colorant"#000000"
+    key_label_color=colorant"#000000",
+    bar_highlight=colorant"#000000"
 )
 
 Gadfly.push_theme(custom_theme)
 
 function colors()
- return Scale.color_discrete_manual(colorant"#990000", colorant"#ff4000", colorant"#ffbf00")
+ return Scale.color_discrete_manual(colorant"#990000", colorant"#FF5733", colorant"#FFC300", colorant"#DAF7A6")
 end
 
 serversNames = Dict(
